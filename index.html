@@ -73,7 +73,7 @@
     </header>
 
     <!-- HERO SECTION -->
-    <main class="max-w-4xl mx-auto px-4 pt-16 pb-12 text-center flex-grow flex flex-col justify-center">
+    <main class="max-w-4xl mx-auto px-4 pt-12 pb-16 text-center flex-grow flex flex-col justify-center">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-medium mb-6 mx-auto">
         <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
         <span class="lang-es">Evite hasta 40 días de atraso en la Municipalidad</span>
@@ -91,7 +91,7 @@
       </p>
 
       <!-- AUDIT CARD / FORM -->
-      <div class="bg-slate-800/60 border border-slate-700 p-6 md:p-8 rounded-2xl max-w-lg mx-auto w-full text-left shadow-2xl backdrop-blur-sm">
+      <div class="bg-slate-800/60 border border-slate-700 p-6 md:p-8 rounded-2xl max-w-lg mx-auto w-full text-left shadow-2xl backdrop-blur-sm mb-16">
         <div class="flex justify-between items-center mb-6 border-b border-slate-700/60 pb-4">
           <h2 class="font-bold text-lg text-slate-100">
             <span class="lang-es">Solicitar Pre-Auditoría</span>
@@ -144,6 +144,55 @@
           <span class="lang-en">One-time payment of ₡10,000 via SINPE Móvil or Transfer.</span>
         </p>
       </div>
+
+      <!-- HOW IT WORKS / PASOS DEL SERVICIO -->
+      <div class="border-t border-slate-800 pt-12 text-left">
+        <h3 class="text-xl font-bold text-center mb-8 text-slate-200">
+          <span class="lang-es">¿Cómo funciona el servicio?</span>
+          <span class="lang-en">How does it work?</span>
+        </h3>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <!-- Step 1 -->
+          <div class="bg-slate-800/40 border border-slate-800 p-5 rounded-xl">
+            <div class="w-8 h-8 bg-emerald-500/10 text-emerald-400 rounded-lg flex items-center justify-center font-bold font-mono text-sm mb-3 border border-emerald-500/20">1</div>
+            <h4 class="font-semibold text-slate-100 text-sm mb-1">
+              <span class="lang-es">Envíe sus documentos</span>
+              <span class="lang-en">Send your documents</span>
+            </h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              <span class="lang-es">Nos adjunta por WhatsApp los PDF o fotos de sus requisitos (permiso de salud, personería, croquis, etc.).</span>
+              <span class="lang-en">Send us your requirement PDFs or photos via WhatsApp (health permit, power of attorney, layout, etc.).</span>
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-slate-800/40 border border-slate-800 p-5 rounded-xl">
+            <div class="w-8 h-8 bg-emerald-500/10 text-emerald-400 rounded-lg flex items-center justify-center font-bold font-mono text-sm mb-3 border border-emerald-500/20">2</div>
+            <h4 class="font-semibold text-slate-100 text-sm mb-1">
+              <span class="lang-es">Auditoría en < 4 hrs</span>
+              <span class="lang-en">Audit in < 4 hrs</span>
+            </h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              <span class="lang-es">Cotejamos fechas de vencimiento, vigencia legal y alineación con la normativa municipal vigente.</span>
+              <span class="lang-en">We verify expiration dates, legal validity, and compliance with current municipal bylaws.</span>
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-slate-800/40 border border-slate-800 p-5 rounded-xl">
+            <div class="w-8 h-8 bg-emerald-500/10 text-emerald-400 rounded-lg flex items-center justify-center font-bold font-mono text-sm mb-3 border border-emerald-500/20">3</div>
+            <h4 class="font-semibold text-slate-100 text-sm mb-1">
+              <span class="lang-es">Reciba su Dictamen</span>
+              <span class="lang-en">Get your Verdict</span>
+            </h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              <span class="lang-es">Le entregamos un reporte claro: listo para ingresar o la lista exacta de correcciones necesarias.</span>
+              <span class="lang-en">We send a clear report: ready for submission or the exact list of required fixes.</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER -->
@@ -177,9 +226,9 @@
 
         let message = "";
         if (lang === 'en') {
-          message = `Hello! I would like to request a Pre-Audit for a ${tramite} in ${canton}. Please send me the SINPE details for the ₡10,000 payment.`;
+          message = `Hello! I would like to request a Pre-Audit for a ${tramite} in ${canton}. Please send me the SINPE details and instructions to send my documents.`;
         } else {
-          message = `¡Hola! Me gustaría solicitar una Pre-Auditoría para un trámite de ${tramite} en la Municipalidad de ${canton}. Quedo a la espera de los datos de SINPE para realizar el pago de ₡10,000.`;
+          message = `¡Hola! Me gustaría solicitar una Pre-Auditoría para un trámite de ${tramite} en la Municipalidad de ${canton}. Quedo a la espera de los datos de SINPE y las instrucciones para enviar mis documentos.`;
         }
 
         const encodedMessage = encodeURIComponent(message);
