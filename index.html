@@ -95,7 +95,25 @@
 
       <!-- AUDIT CARD / FORM -->
       <div class="bg-slate-800/60 border border-slate-700 p-6 md:p-8 rounded-2xl max-w-lg mx-auto w-full text-left shadow-2xl backdrop-blur-sm mb-16">
-        <div class="flex justify-between items-center mb-6 border-b border-slate-700/60 pb-4">
+        
+        <!-- TRUST & CREDIBILITY HEADER -->
+        <div class="flex items-center gap-3 pb-4 mb-6 border-b border-slate-700/60">
+          <div class="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-lg">
+            🛡️
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-slate-100">
+              <span class="lang-es">Servicio Auditado por Aura Link Digital</span>
+              <span class="lang-en">Service Audited by Aura Link Digital</span>
+            </h3>
+            <p class="text-xs text-slate-400">
+              <span class="lang-es">Verificación experta contra el reglamento municipal vigente.</span>
+              <span class="lang-en">Expert verification against current municipal bylaws.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center mb-6">
           <h2 class="font-bold text-lg text-slate-100">
             <span class="lang-es">Solicitar Pre-Auditoría</span>
             <span class="lang-en">Request Pre-Audit</span>
@@ -143,9 +161,13 @@
           </button>
         </div>
 
-        <p class="text-[11px] text-slate-500 mt-4 text-center">
-          <span class="lang-es">Pago único de ₡10,000 mediante SINPE Móvil o Transferencia.</span>
-          <span class="lang-en">One-time payment of ₡10,000 via SINPE Móvil or Transfer.</span>
+        <p class="text-[11px] text-slate-400 mt-4 text-center leading-relaxed">
+          🔒 <strong class="text-slate-300">
+            <span class="lang-es">Garantía PermisoRápido:</span>
+            <span class="lang-en">PermisoRápido Guarantee:</span>
+          </strong> 
+          <span class="lang-es">Si la municipalidad rechaza su trámite por un error de forma aprobado en nuestro reporte, le devolvemos el 100% de su dinero.</span>
+          <span class="lang-en">If the municipality rejects your permit due to a formal error approved in our report, we refund 100% of your money.</span>
         </p>
       </div>
 
@@ -230,7 +252,7 @@
 
         let message = "";
         if (lang === 'en') {
-          message = `Hello! I would like to request a Pre-Audit for a ${tramite} in ${canton}. Please send me the SINPE details and instructions to send my documents.`;
+          message = `Hello! I would like to request a Pre-Audit for my ${tramite} in ${canton}. Please send me the SINPE details and instructions to send my documents.`;
         } else {
           message = `¡Hola! Me gustaría solicitar una Pre-Auditoría para mi trámite de ${tramite} en la Municipalidad de ${canton}. Quedo a la espera de los datos de SINPE y las instrucciones para enviar mis documentos.`;
         }
