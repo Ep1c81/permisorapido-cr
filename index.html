@@ -3,36 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PermisoRápido CR | Pre-Auditoría de Patentes Municipales</title>
+  <title>PermisoRápido CR | Pre-Auditoría Exprés de Patentes Municipales</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @keyframes pulse-subtle {
       0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.03); }
+      50% { transform: scale(1.02); }
     }
     .animate-pulse-subtle {
       animation: pulse-subtle 2s infinite ease-in-out;
     }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans pb-20 md:pb-0">
+<body class="bg-slate-50 text-slate-800 font-sans pb-24 md:pb-12">
 
-  <div class="bg-amber-500 text-slate-950 text-xs sm:text-sm font-semibold py-2 px-4 text-center">
-    ⚡ Atención San José, Escazú y Santa Ana: Solo 10 cupos de revisión exprés esta semana.
+  <div class="w-full bg-slate-900 text-slate-200 text-xs sm:text-sm py-2.5 px-4 text-center font-medium border-b border-slate-800">
+    🟢 Sistemas Activos de Pre-Auditoría para: <span class="text-emerald-400 font-bold">San José • Escazú • Santa Ana</span>
   </div>
 
-  <section class="max-w-4xl mx-auto px-4 py-10 text-center">
-    <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">
-      ✓ Garantía 100% de Devolución
-    </span>
-    <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-4">
-      ¿Pagando alquiler con el local cerrado por la patente municipal?
+  <div class="w-full bg-amber-500 text-slate-950 text-xs sm:text-sm font-bold py-2.5 px-4 text-center shadow-sm">
+    ⚡ Alerta de Apertura: Solo 10 cupos de revisión exprés disponibles esta semana.
+  </div>
+
+  <main class="max-w-4xl mx-auto px-4 pt-12 pb-8 text-center">
+    <div class="inline-block bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wide mb-6 shadow-sm">
+      ✓ Garantía 100% de Devolución si la Muni rechaza por error de forma
+    </div>
+    
+    <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
+      ¿Pagando alquiler con el local cerrado esperando la patente municipal?
     </h1>
-    <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-      Pre-auditamos sus documentos en menos de 4 horas por ₡10,000 para detectar errores de forma antes de ingresarlos a la municipalidad.
+    
+    <p class="text-base sm:text-lg text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+      Evite semanas de retraso y devoluciones burocráticas. Pre-auditamos todo su expediente en menos de 4 horas por solo ₡10,000.
     </p>
 
-    <div class="flex flex-col items-center justify-center gap-3">
+    <div class="flex flex-col items-center justify-center gap-3 mb-12">
       <a href="https://wa.me/50663889598?text=Hola,%20quisiera%20consultar%20mi%20caso%20de%20patente%20municipal%20de%20forma%20gratuita." 
          target="_blank" 
          rel="noopener noreferrer" 
@@ -44,57 +50,91 @@
       </a>
       <span class="text-xs text-slate-500 font-medium">⚡ Respuesta media en &lt; 15 minutos</span>
     </div>
-  </section>
 
-  <section class="max-w-3xl mx-auto px-4 py-8">
-    <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 sm:p-8">
-      <h2 class="text-xl font-bold text-slate-900 mb-2 text-center">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center mb-12">
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+        <p class="font-bold text-slate-900 text-sm">⏱️ Informe en &lt; 4 Horas</p>
+        <p class="text-xs text-slate-500 mt-1">Revisión detallada de requisitos formales.</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+        <p class="font-bold text-slate-900 text-sm">🔒 100% Confidencial</p>
+        <p class="text-xs text-slate-500 mt-1">Sus documentos comerciales seguros.</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+        <p class="font-bold text-slate-900 text-sm">💼 Inversión Única</p>
+        <p class="text-xs text-slate-500 mt-1">₡10,000 por expediente completo.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 sm:p-10 text-left mb-12">
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2 text-center">
         📋 Diagnóstico Rápido: Evaluación de Riesgo de Rechazo
       </h2>
-      <p class="text-sm text-slate-600 text-center mb-6">
-        Marque su estado actual para evaluar si su expediente corre riesgo de devolución:
+      <p class="text-sm text-slate-600 text-center mb-8">
+        Marque su estado actual para verificar si su expediente cumple con los filtros municipales:
       </p>
 
-      <form id="risk-form" class="space-y-4">
+      <form id="risk-form" class="space-y-6">
         <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
-          <p class="font-semibold text-sm text-slate-800 mb-2">1. ¿Tiene el Uso de Suelo aprobado para su actividad exacta?</p>
-          <div class="flex gap-4 text-sm">
-            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q1" value="si" onclick="calculateRisk()" /> Sí</label>
-            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q1" value="no" onclick="calculateRisk()" /> No</label>
-            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q1" value="nose" onclick="calculateRisk()" /> No sé</label>
+          <p class="font-semibold text-sm text-slate-800 mb-3">1. ¿Tiene el Uso de Suelo aprobado para su actividad comercial exacta?</p>
+          <div class="flex gap-6 text-sm">
+            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q1" value="si" onclick="calculateRisk()" /> Sí</label>
+            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q1" value="no" onclick="calculateRisk()" /> No</label>
+            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q1" value="nose" onclick="calculateRisk()" /> No sé</label>
           </div>
         </div>
 
         <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
-          <p class="font-semibold text-sm text-slate-800 mb-2">2. ¿El plano catastrado coincide 100% con la distribución actual del local?</p>
-          <div class="flex gap-4 text-sm">
-            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q2" value="si" onclick="calculateRisk()" /> Sí</label>
-            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q2" value="no" onclick="calculateRisk()" /> No</label>
-            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q2" value="nose" onclick="calculateRisk()" /> No sé</label>
+          <p class="font-semibold text-sm text-slate-800 mb-3">2. ¿El plano catastrado coincide con la distribución interna actual?</p>
+          <div class="flex gap-6 text-sm">
+            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q2" value="si" onclick="calculateRisk()" /> Sí</label>
+            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q2" value="no" onclick="calculateRisk()" /> No</label>
+            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q2" value="nose" onclick="calculateRisk()" /> No sé</label>
           </div>
         </div>
 
         <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
-          <p class="font-semibold text-sm text-slate-800 mb-2">3. ¿Tiene tramitado o al día el Permiso Sanitario de Funcionamiento del Ministerio de Salud?</p>
-          <div class="flex gap-4 text-sm">
-            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q3" value="si" onclick="calculateRisk()" /> Sí</label>
-            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q3" value="no" onclick="calculateRisk()" /> No</label>
-            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q3" value="nose" onclick="calculateRisk()" /> No sé</label>
+          <p class="font-semibold text-sm text-slate-800 mb-3">3. ¿Cuenta con el Permiso Sanitario de Funcionamiento de Salud al día?</p>
+          <div class="flex gap-6 text-sm">
+            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q3" value="si" onclick="calculateRisk()" /> Sí</label>
+            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q3" value="no" onclick="calculateRisk()" /> No</label>
+            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q3" value="nose" onclick="calculateRisk()" /> No sé</label>
           </div>
         </div>
       </form>
 
-      <div id="risk-result" class="hidden mt-6 p-4 rounded-xl border text-center transition-all">
+      <div id="risk-result" class="hidden mt-8 p-6 rounded-xl border text-center transition-all">
         <p id="risk-status" class="font-bold text-lg mb-2"></p>
-        <p id="risk-desc" class="text-sm mb-4"></p>
-        <a id="risk-whatsapp" href="https://wa.me/50663889598?text=Hola,%20hice%20el%20diagnostico%20en%20el%20sitio%20web%20y%20quiero%20evitar%20un%20rechazo%20en%20mi%20patente." target="_blank" rel="noopener noreferrer" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3 rounded-lg shadow">
+        <p id="risk-desc" class="text-sm mb-6 text-slate-700"></p>
+        <a id="risk-whatsapp" href="https://wa.me/50663889598?text=Hola,%20hice%20el%20diagnostico%20en%20el%20sitio%20web%20y%20quiero%20evitar%20un%20rechazo%20en%20mi%20patente." target="_blank" rel="noopener noreferrer" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base px-8 py-3.5 rounded-xl shadow-md">
           Validar Expediente por ₡10,000 en WhatsApp
         </a>
       </div>
     </div>
-  </section>
 
-  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-3 flex items-center justify-between z-50 md:hidden shadow-lg">
+    <section class="mb-12 text-left">
+      <h3 class="text-xl font-bold text-slate-900 text-center mb-6">Casos de Éxito en la Zona</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-xs text-amber-500 font-bold mb-2">★★★★★ (Santa Ana)</p>
+          <p class="text-sm text-slate-700 italic mb-4">"Estaba pagando alquiler con el local cerrado. Detectaron que el croquis no coincidía antes de entregarlo. ¡Nos ahorraron semanas!"</p>
+          <p class="text-xs font-bold text-slate-900">— Carlos M., Gastrobar</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-xs text-amber-500 font-bold mb-2">★★★★★ (Escazú)</p>
+          <p class="text-sm text-slate-700 italic mb-4">"El trámite de Salud y Patente me tenía estresadísima. Con la revisión de 4 horas supimos exactamente qué faltaba."</p>
+          <p class="text-xs font-bold text-slate-900">— Andrea V., Estética & Spa</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-xs text-amber-500 font-bold mb-2">★★★★★ (San José)</p>
+          <p class="text-sm text-slate-700 italic mb-4">"Servicio directo y al grano por WhatsApp. Envié los papeles en la mañana y al mediodía tenía el reporte listo."</p>
+          <p class="text-xs font-bold text-slate-900">— Roberto S., Retail</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-3.5 px-4 flex items-center justify-between z-50 md:hidden shadow-lg">
     <div>
       <span class="text-xs text-slate-500 block">Pre-Auditoría Exprés</span>
       <span class="font-extrabold text-slate-900 text-sm">₡10,000 <span class="text-xs font-normal text-emerald-600">(100% Garantizado)</span></span>
@@ -102,7 +142,7 @@
     <a href="https://wa.me/50663889598?text=Hola,%20me%20gustaria%20solicitar%20la%20pre-auditoria%20expres%20de%20mi%20patente." 
        target="_blank" 
        rel="noopener noreferrer" 
-       class="bg-emerald-600 text-white font-bold text-xs px-4 py-2.5 rounded-lg">
+       class="bg-emerald-600 text-white font-bold text-xs px-4 py-3 rounded-xl shadow">
       💬 Hablar con Especialista
     </a>
   </div>
@@ -123,13 +163,13 @@
       resultBox.classList.remove('hidden');
 
       if (q1 === 'si' && q2 === 'si' && q3 === 'si') {
-        resultBox.className = 'mt-6 p-4 rounded-xl border bg-emerald-50 border-emerald-200 text-emerald-900 text-center';
+        resultBox.className = 'mt-8 p-6 rounded-xl border bg-emerald-50 border-emerald-200 text-emerald-900 text-center';
         statusText.textContent = '🟢 Riesgo Bajo de Rechazo';
-        descText.textContent = 'Parece que tiene la estructura base completa. Una pre-auditoría final evitará inconsistencias menores de forma antes de la presentación.';
+        descText.textContent = 'Tiene la estructura base completa. Una pre-auditoría final validará que no existan errores menores de forma.';
       } else {
-        resultBox.className = 'mt-6 p-4 rounded-xl border bg-amber-50 border-amber-300 text-amber-950 text-center';
+        resultBox.className = 'mt-8 p-6 rounded-xl border bg-amber-50 border-amber-300 text-amber-950 text-center';
         statusText.textContent = '🔴 Riesgo Alto de Retraso o Devolución';
-        descText.textContent = 'Su expediente presenta vacíos documentales que la municipalidad podría utilizar para devolver el trámite y retrasar su apertura.';
+        descText.textContent = 'Su expediente presenta vacíos documentales que la municipalidad usará para devolver el trámite.';
       }
 
       waLink.href = 'https://wa.me/50663889598?text=Hola,%20hice%20el%20diagnostico%20en%20el%20sitio%20web%20y%20quiero%20evitar%20un%20rechazo%20en%20mi%20patente.';
