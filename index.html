@@ -1,209 +1,409 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>PermisoRápido CR | Pre-Auditoría de Patentes Municipales en San José, Escazú y Santa Ana</title>
-  <meta name="description" content="Evite retrasos y rechazos en su patente municipal. Pre-auditamos sus documentos en menos de 4 horas para San José, Escazú y Santa Ana por solo ₡10,000. ¡100% garantizado!" />
-  <meta name="keywords" content="patente municipal costa rica, permisos de funcionamiento san jose, patente escazu, patente santa ana, municipalidad de santa ana, ministerio de salud permisos" />
-  <meta name="author" content="Auralinkdigital.com" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permiso Rápido CR | Asesoría Premium en Patentes Municipales</title>
+    <meta name="description" content="¿Local cerrado esperando la patente municipal? Pre-auditamos su expediente en 4 horas por solo ₡10,000. Expertos en San José, Escazú y Santa Ana.">
+    
+    <!-- Google tag (gtag.js) - REPLACE G-XXXXXXXXXX WITH YOUR ACTUAL ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  <meta property="og:title" content="PermisoRápido CR | Pre-Auditoría de Patentes y Permisos" />
-  <meta property="og:description" content="¿Pagando alquiler con el local cerrado? Pre-auditamos su expediente municipal en menos de 4 horas por ₡10,000." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://permisorapido.auralinkdigital.com/" />
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <!-- End Google Tag -->
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "PermisoRápido CR",
-    "description": "Servicio de pre-auditoría exprés de expedientes para patentes municipales y permisos de salud en Costa Rica.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Santa Ana",
-      "addressRegion": "San José",
-      "addressCountry": "CR"
-    },
-    "areaServed": ["San José", "Escazú", "Santa Ana"],
-    "priceRange": "₡10000",
-    "url": "https://permisorapido.auralinkdigital.com/"
-  }
-  </script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Inter for body, Playfair Display for headlines (Premium feel) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <script async src="https://cloud.umami.is/script.js" data-website-id="12de3e36-a074-43cf-b2c1-b1c45fa044cf"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        premium: {
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            gold: '#d97706',
+                            emerald: '#059669',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @keyframes pulse-subtle {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.02); }
-    }
-    .animate-pulse-subtle {
-      animation: pulse-subtle 2s infinite ease-in-out;
-    }
-  </style>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 35px;
+            right: 35px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .whatsapp-float:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.6);
+        }
+        
+        .premium-btn {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .premium-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to right, #059669, #10b981);
+            z-index: -1;
+            transition: opacity 0.3s ease;
+            opacity: 1;
+        }
+        .premium-btn:hover::before {
+            opacity: 0.8;
+        }
+        .premium-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(5, 150, 105, 0.8);
+        }
+
+        /* Subtle fade in for the page */
+        .fade-in { animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Blinking dot animation */
+        .blink { animation: blink 1.5s infinite; }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans pb-24 md:pb-12">
+<body class="text-slate-800 antialiased fade-in">
 
-  <div class="w-full bg-slate-900 text-slate-200 text-xs sm:text-sm py-2.5 px-4 text-center font-medium border-b border-slate-800">
-    🟢 Sistemas Activos de Pre-Auditoría para: <span class="text-emerald-400 font-bold">San José • Escazú • Santa Ana</span>
-  </div>
-
-  <div class="w-full bg-amber-500 text-slate-950 text-xs sm:text-sm font-bold py-2.5 px-4 text-center shadow-sm">
-    ⚡ Alerta de Apertura: Solo 10 cupos de revisión exprés disponibles esta semana.
-  </div>
-
-  <main class="max-w-4xl mx-auto px-4 pt-12 pb-8 text-center">
-    <div class="inline-block bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wide mb-6 shadow-sm">
-      ✓ Garantía 100% de Devolución si la Muni rechaza por error de forma
-    </div>
-    
-    <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
-      ¿Pagando alquiler con el local cerrado esperando la patente municipal?
-    </h1>
-    
-    <p class="text-base sm:text-lg text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-      Evite semanas de retraso y devoluciones burocráticas en San José, Escazú y Santa Ana. Pre-auditamos todo su expediente en menos de 4 horas por solo ₡10,000.
-    </p>
-
-    <div class="flex flex-col items-center justify-center gap-3 mb-12">
-      <a href="https://wa.me/50663889598?text=Hola,%20quisiera%20consultar%20mi%20caso%20de%20patente%20municipal%20de%20forma%20gratuita." 
-         target="_blank" 
-         rel="noopener noreferrer" 
-         class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3 animate-pulse-subtle">
-        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-        </svg>
-        💬 Consultar mi Caso por WhatsApp (Gratis)
-      </a>
-      <span class="text-xs text-slate-500 font-medium">⚡ Respuesta media en &lt; 15 minutos</span>
+    <!-- SCARCITY ALERT BANNER (Merged from Gemini) -->
+    <div class="bg-amber-500 text-amber-950 text-center py-2 text-xs font-bold tracking-wide uppercase px-4">
+        <i class="fas fa-bolt mr-1"></i> Alerta de Apertura: Solo <span class="underline decoration-2">10 cupos</span> de revisión exprés disponibles esta semana
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center mb-12">
-      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-        <p class="font-bold text-slate-900 text-sm">⏱️ Informe en &lt; 4 Horas</p>
-        <p class="text-xs text-slate-500 mt-1">Revisión detallada de requisitos formales.</p>
-      </div>
-      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-        <p class="font-bold text-slate-900 text-sm">🔒 100% Confidencial</p>
-        <p class="text-xs text-slate-500 mt-1">Sus documentos comerciales seguros.</p>
-      </div>
-      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-        <p class="font-bold text-slate-900 text-sm">💼 Inversión Única</p>
-        <p class="text-xs text-slate-500 mt-1">₡10,000 por expediente completo.</p>
-      </div>
+    <!-- GUARANTEE BAR -->
+    <div class="bg-premium-dark text-slate-200 text-center py-2.5 text-xs font-medium tracking-wide uppercase px-4">
+        <i class="fas fa-shield-alt text-premium-gold mr-2"></i> Garantía 100% de devolución si la Muni rechaza por error de forma
     </div>
 
-    <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 sm:p-10 text-left mb-12">
-      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2 text-center">
-        📋 Diagnóstico Rápido: Evaluación de Riesgo de Rechazo
-      </h2>
-      <p class="text-sm text-slate-600 text-center mb-8">
-        Marque su estado actual para verificar si su expediente cumple con los filtros municipales:
-      </p>
+    <!-- HERO SECTION -->
+    <header class="bg-white pt-16 pb-20 px-4 md:px-8 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
+            
+            <!-- Left Side: Copy & CTA -->
+            <div class="lg:col-span-7">
+                <!-- Active Systems Badge (Merged vibe from Gemini) -->
+                <div class="inline-flex items-center bg-emerald-50 border border-emerald-100 text-emerald-800 font-semibold px-4 py-1.5 rounded-full text-xs mb-6 tracking-wide uppercase">
+                    <span class="w-2 h-2 bg-premium-emerald rounded-full mr-2 blink"></span>
+                    Sistemas Activos de Pre-Auditoría: San José • Escazú • Santa Ana
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-[1.15] text-premium-dark mb-6">
+                    No pierda más dinero pagando alquiler. <span class="text-premium-emerald italic">Destrabe su patente municipal</span> en tiempo récord.
+                </h1>
+                
+                <p class="text-lg text-slate-600 mb-8 font-light leading-relaxed max-w-2xl">
+                    Pre-auditamos su expediente en menos de 4 horas. Si está en regla, se tramita. Si tiene errores, le indicamos exactamente cómo corregirlos para que la Municipalidad no se lo rechace.
+                </p>
 
-      <form id="risk-form" class="space-y-6">
-        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
-          <p class="font-semibold text-sm text-slate-800 mb-3">1. ¿Tiene el Uso de Suelo aprobado para su actividad comercial exacta?</p>
-          <div class="flex gap-6 text-sm">
-            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q1" value="si" onclick="calculateRisk()" /> Sí</label>
-            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q1" value="no" onclick="calculateRisk()" /> No</label>
-            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q1" value="nose" onclick="calculateRisk()" /> No sé</label>
-          </div>
-        </div>
+                <!-- Premium Offer Box -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 mb-10 flex items-start md:items-center flex-col md:flex-row shadow-sm">
+                    <div class="mb-4 md:mb-0 md:mr-6 md:border-r border-slate-200 md:pr-6">
+                        <p class="text-slate-500 text-sm font-medium mb-1 uppercase tracking-wider">Pre-auditoría completa</p>
+                        <p class="text-4xl text-premium-dark font-serif font-bold">₡10,000</p>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Inversión única por expediente completo. <br>
+                        <span class="font-semibold text-premium-emerald"><i class="fas fa-check-circle mr-1"></i> Se le abona al costo total</span> si decide contratarnos para el trámite completo.
+                    </p>
+                </div>
 
-        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
-          <p class="font-semibold text-sm text-slate-800 mb-3">2. ¿El plano catastrado coincide con la distribución interna actual?</p>
-          <div class="flex gap-6 text-sm">
-            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q2" value="si" onclick="calculateRisk()" /> Sí</label>
-            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q2" value="no" onclick="calculateRisk()" /> No</label>
-            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q2" value="nose" onclick="calculateRisk()" /> No sé</label>
-          </div>
-        </div>
+                <!-- MAIN CTA BUTTON -->
+                <a href="https://wa.me/50663889598?text=Hola,%20necesito%20ayuda%20con%20mi%20patente%20municipal.%20%C2%BFMe%20pueden%20hacer%20la%20pre-auditor%C3%ADa%3F" target="_blank" class="premium-btn flex items-center justify-center w-full sm:w-auto bg-premium-emerald text-white text-lg font-semibold py-4 px-8 rounded-lg shadow-md">
+                    <i class="fab fa-whatsapp text-2xl mr-3"></i> Consultar mi Caso por WhatsApp (Gratis)
+                </a>
+                
+                <p class="text-sm text-slate-500 mt-4 flex items-center justify-center sm:justify-start">
+                    <i class="fas fa-bolt text-premium-gold mr-2"></i> Respuesta media en &lt; 15 minutos. Sin compromiso.
+                </p>
+            </div>
 
-        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
-          <p class="font-semibold text-sm text-slate-800 mb-3">3. ¿Cuenta con el Permiso Sanitario de Funcionamiento de Salud al día?</p>
-          <div class="flex gap-6 text-sm">
-            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q3" value="si" onclick="calculateRisk()" /> Sí</label>
-            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q3" value="no" onclick="calculateRisk()" /> No</label>
-            <label class="flex items-center gap-2 cursor-pointer font-medium"><input type="radio" name="q3" value="nose" onclick="calculateRisk()" /> No sé</label>
-          </div>
+            <!-- Right Side: Visual Proof -->
+            <div class="lg:col-span-5 relative hidden lg:block">
+                <div class="absolute inset-0 bg-gradient-to-tr from-premium-emerald to-premium-dark rounded-2xl transform translate-x-4 translate-y-4 -z-10 opacity-10"></div>
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Revisión profesional de expediente municipal" class="rounded-2xl shadow-2xl object-cover h-[550px] w-full border border-slate-100">
+                
+                <!-- Floating Trust Badge -->
+                <div class="absolute -bottom-6 -left-8 bg-white p-5 rounded-xl shadow-xl border border-slate-100 flex items-center">
+                    <div class="bg-emerald-50 p-3 rounded-full mr-4">
+                        <i class="fas fa-check-double text-premium-emerald text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-premium-dark text-lg">+50 Expedientes</p>
+                        <p class="text-xs text-slate-500 font-medium uppercase tracking-wide">revisados este mes</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </form>
+    </header>
 
-      <div id="risk-result" class="hidden mt-8 p-6 rounded-xl border text-center transition-all">
-        <p id="risk-status" class="font-bold text-lg mb-2"></p>
-        <p id="risk-desc" class="text-sm mb-6 text-slate-700"></p>
-        <a id="risk-whatsapp" href="https://wa.me/50663889598?text=Hola,%20hice%20el%20diagnostico%20en%20el%20sitio%20web%20y%20quiero%20evitar%20un%20rechazo%20en%20mi%20patente." target="_blank" rel="noopener noreferrer" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base px-8 py-3.5 rounded-xl shadow-md">
-          Validar Expediente por ₡10,000 en WhatsApp
-        </a>
-      </div>
-    </div>
-
-    <section class="mb-12 text-left">
-      <h3 class="text-xl font-bold text-slate-900 text-center mb-6">Casos de Éxito en la Zona</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-          <p class="text-xs text-amber-500 font-bold mb-2">★★★★★ (Santa Ana)</p>
-          <p class="text-sm text-slate-700 italic mb-4">"Estaba pagando alquiler con el local cerrado. Detectaron que el croquis no coincidía antes de entregarlo. ¡Nos ahorraron semanas!"</p>
-          <p class="text-xs font-bold text-slate-900">— Carlos M., Gastrobar</p>
+    <!-- TRUST STACK (Icon Strip) -->
+    <section class="bg-premium-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="flex flex-col items-center">
+                <i class="fas fa-clock text-premium-gold text-2xl mb-3"></i>
+                <h3 class="font-semibold text-sm tracking-wide">Informe en &lt; 4 Horas</h3>
+                <p class="text-xs text-slate-400 mt-1 font-light">Revisión detallada de requisitos formales.</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fas fa-lock text-premium-gold text-2xl mb-3"></i>
+                <h3 class="font-semibold text-sm tracking-wide">100% Confidencial</h3>
+                <p class="text-xs text-slate-400 mt-1 font-light">Sus documentos comerciales seguros.</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fas fa-hand-holding-usd text-premium-gold text-2xl mb-3"></i>
+                <h3 class="font-semibold text-sm tracking-wide">Inversión Única</h3>
+                <p class="text-xs text-slate-400 mt-1 font-light">₡10,000 por expediente completo.</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fas fa-user-tie text-premium-gold text-2xl mb-3"></i>
+                <h3 class="font-semibold text-sm tracking-wide">Asesoría Legal</h3>
+                <p class="text-xs text-slate-400 mt-1 font-light">Especialistas en derecho municipal.</p>
+            </div>
         </div>
-        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-          <p class="text-xs text-amber-500 font-bold mb-2">★★★★★ (Escazú)</p>
-          <p class="text-sm text-slate-700 italic mb-4">"El trámite de Salud y Patente me tenía estresadísima. Con la revisión de 4 horas supimos exactamente qué faltaba."</p>
-          <p class="text-xs font-bold text-slate-900">— Andrea V., Estética & Spa</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-          <p class="text-xs text-amber-500 font-bold mb-2">★★★★★ (San José)</p>
-          <p class="text-sm text-slate-700 italic mb-4">"Servicio directo y al grano por WhatsApp. Envié los papeles en la mañana y al mediodía tenía el reporte listo."</p>
-          <p class="text-xs font-bold text-slate-900">— Roberto S., Retail</p>
-        </div>
-      </div>
     </section>
-  </main>
 
-  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-3.5 px-4 flex items-center justify-between z-50 md:hidden shadow-lg">
-    <div>
-      <span class="text-xs text-slate-500 block">Pre-Auditoría Exprés</span>
-      <span class="font-extrabold text-slate-900 text-sm">₡10,000 <span class="text-xs font-normal text-emerald-600">(100% Garantizado)</span></span>
-    </div>
-    <a href="https://wa.me/50663889598?text=Hola,%20me%20gustaria%20solicitar%20la%20pre-auditoria%20expres%20de%20mi%20patente." 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       class="bg-emerald-600 text-white font-bold text-xs px-4 py-3 rounded-xl shadow">
-      💬 Hablar con Especialista
+    <!-- DIAGNOSTIC CHECKLIST (Merged & Redesigned from Gemini) -->
+    <section class="py-20 px-4 bg-slate-50 border-b border-slate-100">
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+            <div class="bg-premium-dark px-8 py-6">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-white flex items-center">
+                    <i class="fas fa-clipboard-check text-premium-gold mr-4"></i>
+                    Diagnóstico Rápido: ¿Su expediente pasará?
+                </h2>
+                <p class="text-slate-300 mt-2 text-sm font-light">Marque mentalmente su estado actual. Si falla en uno, su patente será rechazada.</p>
+            </div>
+            
+            <div class="p-8 space-y-6">
+                <!-- Question 1 -->
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold mr-4 mt-0.5">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800">1. ¿Tiene el Uso de Suelo aprobado para su actividad comercial exacta?</h3>
+                        <p class="text-sm text-slate-500 mt-1">Un uso de suelo genérico no sirve. Debe coincidir letra por letra con lo que va a vender o hacer en el local.</p>
+                    </div>
+                </div>
+                <!-- Question 2 -->
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold mr-4 mt-0.5">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800">2. ¿El plano catastrado coincide con la distribución interna actual?</h3>
+                        <p class="text-sm text-slate-500 mt-1">Si movió una pared, agregó un baño o cambió la cocina, el plano original ya no sirve para la Muni.</p>
+                    </div>
+                </div>
+                <!-- Question 3 -->
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold mr-4 mt-0.5">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800">3. ¿Cuenta con el Permiso Sanitario de Funcionamiento de Salud al día?</h3>
+                        <p class="text-sm text-slate-500 mt-1">Este es el requisito #1 de rechazo. Si está vencido o mal tramitado, la Muni no le dará la patente.</p>
+                    </div>
+                </div>
+
+                <div class="pt-6 mt-6 border-t border-slate-100 text-center">
+                    <p class="text-slate-700 font-semibold mb-4">¿Tiene dudas o marcó al menos un "No"? No arriesgue su inversión.</p>
+                    <a href="https://wa.me/50663889598?text=Hola,%20hice%20el%20diagn%C3%B3stico%20r%C3%A1pido%20y%20tengo%20dudas%20con%20mi%20expediente.%20%C2%BFMe%20pueden%20hacer%20la%20pre-auditor%C3%ADa%3F" target="_blank" class="premium-btn inline-flex items-center justify-center bg-premium-emerald text-white font-semibold py-3 px-8 rounded-lg shadow-md">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> Revisar mi Caso Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS (Sleek Timeline) -->
+    <section class="py-20 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-premium-dark mb-4">Así de fácil es destrabar su local</h2>
+            <p class="text-slate-600 font-light max-w-2xl mx-auto">No pierda semanas dando vueltas en ventanillas. Nosotros le guiamos paso a paso.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10 relative">
+            <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 bg-slate-200 -z-10"></div>
+
+            <!-- Step 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center relative hover:shadow-md transition duration-300">
+                <div class="w-16 h-16 bg-premium-dark text-white rounded-full flex items-center justify-center text-2xl font-serif font-bold mx-auto mb-6 border-4 border-white shadow-sm">1</div>
+                <h3 class="font-bold text-xl mb-3 text-premium-dark">Envíe su caso</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Mándenos un mensaje por WhatsApp con fotos claras de los documentos que tiene actualmente.</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center relative hover:shadow-md transition duration-300">
+                <div class="w-16 h-16 bg-premium-emerald text-white rounded-full flex items-center justify-center text-2xl font-serif font-bold mx-auto mb-6 border-4 border-white shadow-sm">2</div>
+                <h3 class="font-bold text-xl mb-3 text-premium-dark">Pre-auditoría (4h)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Revisamos todo contra la normativa municipal y le entregamos un informe claro de qué falta.</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center relative hover:shadow-md transition duration-300">
+                <div class="w-16 h-16 bg-premium-dark text-white rounded-full flex items-center justify-center text-2xl font-serif font-bold mx-auto mb-6 border-4 border-white shadow-sm">3</div>
+                <h3 class="font-bold text-xl mb-3 text-premium-dark">Vía Libre</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Corregimos lo necesario y presentamos el expediente impecable para que le aprueben la patente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF (TESTIMONIALS - MERGED & EXPANDED) -->
+    <section class="py-20 px-4 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-serif font-bold text-center text-premium-dark mb-12">Casos de Éxito en la Zona</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
+                    <i class="fas fa-quote-left text-4xl text-slate-100 absolute top-6 left-6"></i>
+                    <div class="relative z-10">
+                        <div class="flex text-premium-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic mb-6 leading-relaxed text-sm">"Estaba pagando alquiler con el local cerrado. Detectaron que el croquis no coincidía antes de entregarlo. ¡Nos ahorraron semanas!"</p>
+                        <div class="flex items-center border-t border-slate-100 pt-4">
+                            <div class="w-10 h-10 bg-premium-dark text-white rounded-full flex items-center justify-center font-bold mr-3 text-sm">CM</div>
+                            <div>
+                                <p class="font-bold text-premium-dark text-sm">Carlos M.</p>
+                                <p class="text-xs text-slate-500">Gastrobar (Santa Ana)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
+                    <i class="fas fa-quote-left text-4xl text-slate-100 absolute top-6 left-6"></i>
+                    <div class="relative z-10">
+                        <div class="flex text-premium-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic mb-6 leading-relaxed text-sm">"El trámite de Salud y Patente me tenía estresadísima. Con la revisión de 4 horas supimos exactamente qué faltaba."</p>
+                        <div class="flex items-center border-t border-slate-100 pt-4">
+                            <div class="w-10 h-10 bg-premium-emerald text-white rounded-full flex items-center justify-center font-bold mr-3 text-sm">AV</div>
+                            <div>
+                                <p class="font-bold text-premium-dark text-sm">Andrea V.</p>
+                                <p class="text-xs text-slate-500">Estética & Spa (Escazú)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 (New from Gemini) -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
+                    <i class="fas fa-quote-left text-4xl text-slate-100 absolute top-6 left-6"></i>
+                    <div class="relative z-10">
+                        <div class="flex text-premium-gold mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic mb-6 leading-relaxed text-sm">"Servicio directo y al grano por WhatsApp. Envié los papeles en la mañana y al mediodía tenía el reporte listo."</p>
+                        <div class="flex items-center border-t border-slate-100 pt-4">
+                            <div class="w-10 h-10 bg-slate-700 text-white rounded-full flex items-center justify-center font-bold mr-3 text-sm">RS</div>
+                            <div>
+                                <p class="font-bold text-premium-dark text-sm">Roberto S.</p>
+                                <p class="text-xs text-slate-500">Retail (San José)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OBJECTION KILLERS (FAQ) -->
+    <section class="bg-white py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-center text-premium-dark mb-12">¿Por qué confiar en nosotros?</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 md:p-8">
+                    <h3 class="font-bold text-lg text-premium-dark mb-3 flex items-start">
+                        <i class="fas fa-comment-dots text-premium-emerald mt-1 mr-4"></i> 
+                        "¿Y si mi expediente está muy mal?"
+                    </h3>
+                    <p class="text-slate-600 ml-9 leading-relaxed">No se preocupe. El 80% de los expedientes que recibimos tienen errores. Para eso es la pre-auditoría. Le diremos exactamente qué corregir antes de que la Muni lo rechace y pierda tiempo valioso.</p>
+                </div>
+                
+                <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 md:p-8">
+                    <h3 class="font-bold text-lg text-premium-dark mb-3 flex items-start">
+                        <i class="fas fa-comment-dots text-premium-emerald mt-1 mr-4"></i> 
+                        "¿Es legal? ¿Quiénes son ustedes?"
+                    </h3>
+                    <p class="text-slate-600 ml-9 leading-relaxed">Contamos con asesores legales especializados en derecho municipal en Costa Rica. No hacemos inventos; revisamos que todo cumpla con la ley y los requisitos específicos de cada Municipalidad.</p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 md:p-8">
+                    <h3 class="font-bold text-lg text-premium-dark mb-3 flex items-start">
+                        <i class="fas fa-comment-dots text-premium-emerald mt-1 mr-4"></i> 
+                        "¿Por qué cobran ₡10,000?"
+                    </h3>
+                    <p class="text-slate-600 ml-9 leading-relaxed">Porque valoramos nuestro tiempo y su urgencia. Es una tarifa simbólica para filtrar casos y darle un servicio serio. Si decidimos tramitar su patente completa, esos ₡10,000 se le rebajan del precio final.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="bg-premium-dark py-20 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">¿Listo para abrir su local?</h2>
+            <p class="text-slate-300 mb-10 text-lg font-light">Deje de perder dinero por trámites estancados. Haga su pre-auditoría hoy mismo.</p>
+            <a href="https://wa.me/50663889598?text=Hola,%20necesito%20ayuda%20con%20mi%20patente%20municipal.%20%C2%BFMe%20pueden%20hacer%20la%20pre-auditor%C3%ADa%3F" target="_blank" class="premium-btn inline-flex items-center justify-center bg-premium-emerald text-white font-semibold py-4 px-10 rounded-lg shadow-lg text-lg">
+                <i class="fab fa-whatsapp text-2xl mr-3"></i> Hablemos por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0b1120] text-slate-500 py-8 text-center text-sm font-light">
+        <p>&copy; 2024 Permiso Rápido CR. Todos los derechos reservados.</p>
+        <p class="mt-2">Especialistas en trámites municipales en Costa Rica.</p>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON (Sticky) -->
+    <a href="https://wa.me/50663889598?text=Hola,%20necesito%20ayuda%20con%20mi%20patente%20municipal.%20%C2%BFMe%20pueden%20hacer%20la%20pre-auditor%C3%ADa%3F" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
     </a>
-  </div>
 
-  <script>
-    function calculateRisk() {
-      const q1 = document.querySelector('input[name="q1"]:checked')?.value;
-      const q2 = document.querySelector('input[name="q2"]:checked')?.value;
-      const q3 = document.querySelector('input[name="q3"]:checked')?.value;
-
-      if (!q1 || !q2 || !q3) return;
-
-      const resultBox = document.getElementById('risk-result');
-      const statusText = document.getElementById('risk-status');
-      const descText = document.getElementById('risk-desc');
-      const waLink = document.getElementById('risk-whatsapp');
-
-      resultBox.classList.remove('hidden');
-
-      if (q1 === 'si' && q2 === 'si' && q3 === 'si') {
-        resultBox.className = 'mt-8 p-6 rounded-xl border bg-emerald-50 border-emerald-200 text-emerald-900 text-center';
-        statusText.textContent = '🟢 Riesgo Bajo de Rechazo';
-        descText.textContent = 'Tiene la estructura base completa. Una pre-auditoría final validará que no existan errores menores de forma.';
-      } else {
-        resultBox.className = 'mt-8 p-6 rounded-xl border bg-amber-50 border-amber-300 text-amber-950 text-center';
-        statusText.textContent = '🔴 Riesgo Alto de Retraso o Devolución';
-        descText.textContent = 'Su expediente presenta vacíos documentales que la municipalidad usará para devolver el trámite.';
-      }
-
-      waLink.href = 'https://wa.me/50663889598?text=Hola,%20hice%20el%20diagnostico%20en%20el%20sitio%20web%20y%20quiero%20evitar%20un%20rechazo%20en%20mi%20patente.';
-    }
-  </script>
 </body>
 </html>
