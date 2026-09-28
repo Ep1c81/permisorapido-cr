@@ -59,30 +59,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
-            keyframes: {
-              slideIn: {
-                '0%': { opacity: '0', transform: 'translateX(calc(var(--dir, 1) * 32px))' },
-                '100%': { opacity: '1', transform: 'translateX(0)' }
-              },
-              floatY: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } },
-              shimmer: { '100%': { transform: 'translateX(100%)' } }
-            },
-            animation: {
-              slideIn: 'slideIn .38s cubic-bezier(.22,1,.36,1) both',
-              floatY: 'floatY 6s ease-in-out infinite',
-              shimmer: 'shimmer 2.4s infinite'
-            }
-          }
-        }
-      };
-    </script>
+    <!-- Tailwind CSS (pre-built: npm run build:css) -->
+    <link rel="stylesheet" href="tailwind.css" />
 
     <!-- Alpine.js & Lucide Icons -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
