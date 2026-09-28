@@ -1,409 +1,1224 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Permiso Rápido CR | Asesoría Premium en Patentes Municipales</title>
-    <meta name="description" content="¿Local cerrado esperando la patente municipal? Pre-auditamos su expediente en 4 horas por solo ₡10,000. Expertos en San José, Escazú y Santa Ana.">
-    
-    <!-- Google tag (gtag.js) - REPLACE G-XXXXXXXXXX WITH YOUR ACTUAL ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#020617" />
 
-      gtag('config', 'G-XXXXXXXXXX');
+    <!-- Umami Analytics -->
+    <script async src="https://cloud.umami.is/script.js" data-website-id="12de3e36-a074-43cf-b2c1-b1c45fa044cf"></script>
+
+    <!-- Primary Search Engine Optimization -->
+    <title>PermisoRápido CR | Pre-Auditoría de Patentes y Locales Comerciales</title>
+    <meta name="description" content="Servicio privado de pre-auditoría documental para patentes municipales de comercio e industria en Costa Rica. No realizamos trámites del CFIA ni del MSP." />
+    <meta name="keywords" content="patente comercial costa rica, apertura local san jose, permisos municipalidad santa ana, requisitos patente escazu, permiso sanitario de funcionamiento cr" />
+    <meta name="robots" content="index, follow, max-snippet:50" />
+    <link rel="canonical" href="https://permisorapido.auralinkdigital.com/" />
+
+    <!-- Open Graph / WhatsApp / Facebook Preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CR" />
+    <meta property="og:site_name" content="PermisoRápido CR" />
+    <meta property="og:url" content="https://permisorapido.auralinkdigital.com/" />
+    <meta property="og:title" content="PermisoRápido CR | Valide su Patente Comercial en Menos de 4 Horas" />
+    <meta property="og:description" content="Un solo documento vencido significa semanas pagando alquiler sin poder abrir. Pre-auditamos el expediente de su negocio por ₡10,000 vía SINPE." />
+
+    <!-- Twitter / X Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://permisorapido.auralinkdigital.com/" />
+    <meta name="twitter:title" content="PermisoRápido CR | Pre-Auditoría Comercial" />
+    <meta name="twitter:description" content="Pre-auditamos la patente de su negocio antes de presentarla en San José, Escazú o Santa Ana." />
+
+    <!-- Localized Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "PermisoRápido CR",
+      "url": "https://permisorapido.auralinkdigital.com/",
+      "description": "Servicio privado de pre-auditoría rápida para patentes y permisos de apertura comercial en Costa Rica.",
+      "telephone": "+50663889598",
+      "areaServed": [
+        { "@type": "City", "name": "San José", "addressCountry": "CR" },
+        { "@type": "City", "name": "Escazú", "addressCountry": "CR" },
+        { "@type": "City", "name": "Santa Ana", "addressCountry": "CR" }
+      ],
+      "priceRange": "₡10,000",
+      "paymentAccepted": "SINPE Móvil, Transferencia Bancaria",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santa Ana",
+        "addressRegion": "San José",
+        "addressCountry": "CR"
+      }
+    }
     </script>
-    <!-- End Google Tag -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts: Inter for body, Playfair Display for headlines (Premium feel) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    colors: {
-                        premium: {
-                            dark: '#0f172a',
-                            light: '#f8fafc',
-                            gold: '#d97706',
-                            emerald: '#059669',
-                        }
-                    }
-                }
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+            keyframes: {
+              slideIn: {
+                '0%': { opacity: '0', transform: 'translateX(calc(var(--dir, 1) * 32px))' },
+                '100%': { opacity: '1', transform: 'translateX(0)' }
+              },
+              floatY: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } },
+              shimmer: { '100%': { transform: 'translateX(100%)' } }
+            },
+            animation: {
+              slideIn: 'slideIn .38s cubic-bezier(.22,1,.36,1) both',
+              floatY: 'floatY 6s ease-in-out infinite',
+              shimmer: 'shimmer 2.4s infinite'
             }
+          }
         }
+      };
     </script>
 
+    <!-- Alpine.js & Lucide Icons -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
-        
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 35px;
-            right: 35px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 32px;
-            box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5);
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .whatsapp-float:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.6);
-        }
-        
-        .premium-btn {
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        .premium-btn::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to right, #059669, #10b981);
-            z-index: -1;
-            transition: opacity 0.3s ease;
-            opacity: 1;
-        }
-        .premium-btn:hover::before {
-            opacity: 0.8;
-        }
-        .premium-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -10px rgba(5, 150, 105, 0.8);
-        }
+      /* Bilingual content: Spanish is the crawlable default */
+      html[lang="es"] .lang-en,
+      html[lang="en"] .lang-es { display: none; }
 
-        /* Subtle fade in for the page */
-        .fade-in { animation: fadeIn 0.8s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        
-        /* Blinking dot animation */
-        .blink { animation: blink 1.5s infinite; }
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+      [x-cloak] { display: none !important; }
+      section[id] { scroll-margin-top: 112px; }
+      body { background: #020617; }
+
+      /* Scroll-triggered reveal */
+      .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+      .reveal.in { opacity: 1; transform: none; }
+
+      /* Ambient background grid */
+      .bg-grid {
+        background-image:
+          linear-gradient(to right, rgba(148,163,184,.06) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(148,163,184,.06) 1px, transparent 1px);
+        background-size: 44px 44px;
+        mask-image: radial-gradient(ellipse at top, #000 30%, transparent 75%);
+        -webkit-mask-image: radial-gradient(ellipse at top, #000 30%, transparent 75%);
+      }
+
+      /* Range slider */
+      .range { -webkit-appearance: none; appearance: none; width: 100%; height: 8px; border-radius: 999px; cursor: pointer;
+        background: linear-gradient(to right, #10b981 0%, #34d399 var(--p, 50%), #1e293b var(--p, 50%)); outline: none; }
+      .range::-webkit-slider-thumb { -webkit-appearance: none; width: 26px; height: 26px; border-radius: 50%; background: #fff;
+        border: 5px solid #10b981; box-shadow: 0 0 0 6px rgba(16,185,129,.18), 0 4px 14px rgba(0,0,0,.4); transition: transform .15s; }
+      .range::-webkit-slider-thumb:hover, .range:active::-webkit-slider-thumb { transform: scale(1.12); }
+      .range::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 5px solid #10b981;
+        box-shadow: 0 0 0 6px rgba(16,185,129,.18); }
+      .range:focus-visible { box-shadow: 0 0 0 3px rgba(52,211,153,.5); }
+
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { scrollbar-width: none; }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+        .reveal { opacity: 1; transform: none; }
+        html { scroll-behavior: auto; }
+      }
     </style>
-</head>
-<body class="text-slate-800 antialiased fade-in">
+  </head>
 
-    <!-- SCARCITY ALERT BANNER (Merged from Gemini) -->
-    <div class="bg-amber-500 text-amber-950 text-center py-2 text-xs font-bold tracking-wide uppercase px-4">
-        <i class="fas fa-bolt mr-1"></i> Alerta de Apertura: Solo <span class="underline decoration-2">10 cupos</span> de revisión exprés disponibles esta semana
-    </div>
+  <body
+    x-data="app()"
+    x-init="init()"
+    class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-emerald-400/30"
+  >
+    <!-- Shared WhatsApp glyph -->
+    <svg width="0" height="0" class="absolute" aria-hidden="true">
+      <symbol id="wa" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </symbol>
+    </svg>
 
-    <!-- GUARANTEE BAR -->
-    <div class="bg-premium-dark text-slate-200 text-center py-2.5 text-xs font-medium tracking-wide uppercase px-4">
-        <i class="fas fa-shield-alt text-premium-gold mr-2"></i> Garantía 100% de devolución si la Muni rechaza por error de forma
-    </div>
-
-    <!-- HERO SECTION -->
-    <header class="bg-white pt-16 pb-20 px-4 md:px-8 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
-            
-            <!-- Left Side: Copy & CTA -->
-            <div class="lg:col-span-7">
-                <!-- Active Systems Badge (Merged vibe from Gemini) -->
-                <div class="inline-flex items-center bg-emerald-50 border border-emerald-100 text-emerald-800 font-semibold px-4 py-1.5 rounded-full text-xs mb-6 tracking-wide uppercase">
-                    <span class="w-2 h-2 bg-premium-emerald rounded-full mr-2 blink"></span>
-                    Sistemas Activos de Pre-Auditoría: San José • Escazú • Santa Ana
-                </div>
-                
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-[1.15] text-premium-dark mb-6">
-                    No pierda más dinero pagando alquiler. <span class="text-premium-emerald italic">Destrabe su patente municipal</span> en tiempo récord.
-                </h1>
-                
-                <p class="text-lg text-slate-600 mb-8 font-light leading-relaxed max-w-2xl">
-                    Pre-auditamos su expediente en menos de 4 horas. Si está en regla, se tramita. Si tiene errores, le indicamos exactamente cómo corregirlos para que la Municipalidad no se lo rechace.
-                </p>
-
-                <!-- Premium Offer Box -->
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 mb-10 flex items-start md:items-center flex-col md:flex-row shadow-sm">
-                    <div class="mb-4 md:mb-0 md:mr-6 md:border-r border-slate-200 md:pr-6">
-                        <p class="text-slate-500 text-sm font-medium mb-1 uppercase tracking-wider">Pre-auditoría completa</p>
-                        <p class="text-4xl text-premium-dark font-serif font-bold">₡10,000</p>
-                    </div>
-                    <p class="text-sm text-slate-600 leading-relaxed">
-                        Inversión única por expediente completo. <br>
-                        <span class="font-semibold text-premium-emerald"><i class="fas fa-check-circle mr-1"></i> Se le abona al costo total</span> si decide contratarnos para el trámite completo.
-                    </p>
-                </div>
-
-                <!-- MAIN CTA BUTTON -->
-                <a href="https://wa.me/50663889598?text=Hola,%20necesito%20ayuda%20con%20mi%20patente%20municipal.%20%C2%BFMe%20pueden%20hacer%20la%20pre-auditor%C3%ADa%3F" target="_blank" class="premium-btn flex items-center justify-center w-full sm:w-auto bg-premium-emerald text-white text-lg font-semibold py-4 px-8 rounded-lg shadow-md">
-                    <i class="fab fa-whatsapp text-2xl mr-3"></i> Consultar mi Caso por WhatsApp (Gratis)
-                </a>
-                
-                <p class="text-sm text-slate-500 mt-4 flex items-center justify-center sm:justify-start">
-                    <i class="fas fa-bolt text-premium-gold mr-2"></i> Respuesta media en &lt; 15 minutos. Sin compromiso.
-                </p>
-            </div>
-
-            <!-- Right Side: Visual Proof -->
-            <div class="lg:col-span-5 relative hidden lg:block">
-                <div class="absolute inset-0 bg-gradient-to-tr from-premium-emerald to-premium-dark rounded-2xl transform translate-x-4 translate-y-4 -z-10 opacity-10"></div>
-                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Revisión profesional de expediente municipal" class="rounded-2xl shadow-2xl object-cover h-[550px] w-full border border-slate-100">
-                
-                <!-- Floating Trust Badge -->
-                <div class="absolute -bottom-6 -left-8 bg-white p-5 rounded-xl shadow-xl border border-slate-100 flex items-center">
-                    <div class="bg-emerald-50 p-3 rounded-full mr-4">
-                        <i class="fas fa-check-double text-premium-emerald text-xl"></i>
-                    </div>
-                    <div>
-                        <p class="font-bold text-premium-dark text-lg">+50 Expedientes</p>
-                        <p class="text-xs text-slate-500 font-medium uppercase tracking-wide">revisados este mes</p>
-                    </div>
-                </div>
-            </div>
+    <!-- ============ FIXED TOP HEADER ============ -->
+    <div class="fixed inset-x-0 top-0 z-50">
+      <!-- Municipal system status bar -->
+      <div class="bg-black/90 border-b border-white/5 text-[11px] sm:text-xs">
+        <div class="max-w-6xl mx-auto px-4 h-8 flex items-center justify-center gap-3 sm:gap-5 text-slate-400 overflow-x-auto no-scrollbar whitespace-nowrap">
+          <span class="hidden sm:inline font-semibold uppercase tracking-widest text-[10px] text-slate-500">
+            <span class="lang-es">Pre-Auditoría activa</span><span class="lang-en">Pre-Audit online</span>
+          </span>
+          <template x-for="c in ['San José','Escazú','Santa Ana']" :key="c">
+            <span class="inline-flex items-center gap-1.5 font-medium text-slate-300">
+              <span class="relative flex h-2 w-2">
+                <span class="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping"></span>
+                <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+              </span>
+              <span x-text="c"></span>
+            </span>
+          </template>
+          <span class="hidden md:inline text-slate-500">·</span>
+          <span class="hidden md:inline text-emerald-400/90 font-semibold">
+            <span class="lang-es">Informe en &lt; 4 horas</span><span class="lang-en">Report in &lt; 4 hours</span>
+          </span>
         </div>
-    </header>
+      </div>
 
-    <!-- TRUST STACK (Icon Strip) -->
-    <section class="bg-premium-dark text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div class="flex flex-col items-center">
-                <i class="fas fa-clock text-premium-gold text-2xl mb-3"></i>
-                <h3 class="font-semibold text-sm tracking-wide">Informe en &lt; 4 Horas</h3>
-                <p class="text-xs text-slate-400 mt-1 font-light">Revisión detallada de requisitos formales.</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <i class="fas fa-lock text-premium-gold text-2xl mb-3"></i>
-                <h3 class="font-semibold text-sm tracking-wide">100% Confidencial</h3>
-                <p class="text-xs text-slate-400 mt-1 font-light">Sus documentos comerciales seguros.</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <i class="fas fa-hand-holding-usd text-premium-gold text-2xl mb-3"></i>
-                <h3 class="font-semibold text-sm tracking-wide">Inversión Única</h3>
-                <p class="text-xs text-slate-400 mt-1 font-light">₡10,000 por expediente completo.</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <i class="fas fa-user-tie text-premium-gold text-2xl mb-3"></i>
-                <h3 class="font-semibold text-sm tracking-wide">Asesoría Legal</h3>
-                <p class="text-xs text-slate-400 mt-1 font-light">Especialistas en derecho municipal.</p>
-            </div>
-        </div>
-    </section>
+      <!-- Navigation -->
+      <header
+        class="transition-all duration-300 border-b"
+        :class="scrolled ? 'bg-slate-950/85 backdrop-blur-xl border-white/10 shadow-2xl shadow-black/40' : 'bg-slate-950/40 backdrop-blur-md border-transparent'"
+      >
+        <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+          <a href="#top" class="flex items-center gap-2 group" aria-label="PermisoRápido CR">
+            <span class="grid place-items-center w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 text-slate-950 shadow-lg shadow-emerald-500/30 group-hover:rotate-6 transition-transform">
+              <i data-lucide="file-check" class="w-5 h-5"></i>
+            </span>
+            <span class="text-xl font-extrabold tracking-tight">Permiso<span class="text-emerald-400">Rápido</span></span>
+            <span class="text-[10px] font-bold px-1.5 py-0.5 rounded-md border border-emerald-400/30 text-emerald-300 bg-emerald-400/10">CR</span>
+          </a>
 
-    <!-- DIAGNOSTIC CHECKLIST (Merged & Redesigned from Gemini) -->
-    <section class="py-20 px-4 bg-slate-50 border-b border-slate-100">
-        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
-            <div class="bg-premium-dark px-8 py-6">
-                <h2 class="text-2xl md:text-3xl font-serif font-bold text-white flex items-center">
-                    <i class="fas fa-clipboard-check text-premium-gold mr-4"></i>
-                    Diagnóstico Rápido: ¿Su expediente pasará?
-                </h2>
-                <p class="text-slate-300 mt-2 text-sm font-light">Marque mentalmente su estado actual. Si falla en uno, su patente será rechazada.</p>
-            </div>
-            
-            <div class="p-8 space-y-6">
-                <!-- Question 1 -->
-                <div class="flex items-start">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold mr-4 mt-0.5">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-slate-800">1. ¿Tiene el Uso de Suelo aprobado para su actividad comercial exacta?</h3>
-                        <p class="text-sm text-slate-500 mt-1">Un uso de suelo genérico no sirve. Debe coincidir letra por letra con lo que va a vender o hacer en el local.</p>
-                    </div>
-                </div>
-                <!-- Question 2 -->
-                <div class="flex items-start">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold mr-4 mt-0.5">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-slate-800">2. ¿El plano catastrado coincide con la distribución interna actual?</h3>
-                        <p class="text-sm text-slate-500 mt-1">Si movió una pared, agregó un baño o cambió la cocina, el plano original ya no sirve para la Muni.</p>
-                    </div>
-                </div>
-                <!-- Question 3 -->
-                <div class="flex items-start">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold mr-4 mt-0.5">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-slate-800">3. ¿Cuenta con el Permiso Sanitario de Funcionamiento de Salud al día?</h3>
-                        <p class="text-sm text-slate-500 mt-1">Este es el requisito #1 de rechazo. Si está vencido o mal tramitado, la Muni no le dará la patente.</p>
-                    </div>
-                </div>
+          <div class="hidden md:flex items-center gap-1 text-sm font-medium text-slate-300">
+            <a href="#diagnostico" class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition"><span class="lang-es">Diagnóstico</span><span class="lang-en">Diagnostic</span></a>
+            <a href="#calculadora" class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition"><span class="lang-es">Calculadora</span><span class="lang-en">Calculator</span></a>
+            <a href="#testimonios" class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition"><span class="lang-es">Testimonios</span><span class="lang-en">Reviews</span></a>
+            <a href="#como-funciona" class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition"><span class="lang-es">Cómo funciona</span><span class="lang-en">How it works</span></a>
+            <a href="#faq" class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition">FAQ</a>
+          </div>
 
-                <div class="pt-6 mt-6 border-t border-slate-100 text-center">
-                    <p class="text-slate-700 font-semibold mb-4">¿Tiene dudas o marcó al menos un "No"? No arriesgue su inversión.</p>
-                    <a href="https://wa.me/50663889598?text=Hola,%20hice%20el%20diagn%C3%B3stico%20r%C3%A1pido%20y%20tengo%20dudas%20con%20mi%20expediente.%20%C2%BFMe%20pueden%20hacer%20la%20pre-auditor%C3%ADa%3F" target="_blank" class="premium-btn inline-flex items-center justify-center bg-premium-emerald text-white font-semibold py-3 px-8 rounded-lg shadow-md">
-                        <i class="fab fa-whatsapp text-xl mr-2"></i> Revisar mi Caso Ahora
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- HOW IT WORKS (Sleek Timeline) -->
-    <section class="py-20 px-4 max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-premium-dark mb-4">Así de fácil es destrabar su local</h2>
-            <p class="text-slate-600 font-light max-w-2xl mx-auto">No pierda semanas dando vueltas en ventanillas. Nosotros le guiamos paso a paso.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-10 relative">
-            <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 bg-slate-200 -z-10"></div>
-
-            <!-- Step 1 -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center relative hover:shadow-md transition duration-300">
-                <div class="w-16 h-16 bg-premium-dark text-white rounded-full flex items-center justify-center text-2xl font-serif font-bold mx-auto mb-6 border-4 border-white shadow-sm">1</div>
-                <h3 class="font-bold text-xl mb-3 text-premium-dark">Envíe su caso</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Mándenos un mensaje por WhatsApp con fotos claras de los documentos que tiene actualmente.</p>
-            </div>
-            <!-- Step 2 -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center relative hover:shadow-md transition duration-300">
-                <div class="w-16 h-16 bg-premium-emerald text-white rounded-full flex items-center justify-center text-2xl font-serif font-bold mx-auto mb-6 border-4 border-white shadow-sm">2</div>
-                <h3 class="font-bold text-xl mb-3 text-premium-dark">Pre-auditoría (4h)</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Revisamos todo contra la normativa municipal y le entregamos un informe claro de qué falta.</p>
-            </div>
-            <!-- Step 3 -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center relative hover:shadow-md transition duration-300">
-                <div class="w-16 h-16 bg-premium-dark text-white rounded-full flex items-center justify-center text-2xl font-serif font-bold mx-auto mb-6 border-4 border-white shadow-sm">3</div>
-                <h3 class="font-bold text-xl mb-3 text-premium-dark">Vía Libre</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Corregimos lo necesario y presentamos el expediente impecable para que le aprueben la patente.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOCIAL PROOF (TESTIMONIALS - MERGED & EXPANDED) -->
-    <section class="py-20 px-4 bg-slate-50 border-y border-slate-100">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-serif font-bold text-center text-premium-dark mb-12">Casos de Éxito en la Zona</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
-                    <i class="fas fa-quote-left text-4xl text-slate-100 absolute top-6 left-6"></i>
-                    <div class="relative z-10">
-                        <div class="flex text-premium-gold mb-4">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-slate-700 italic mb-6 leading-relaxed text-sm">"Estaba pagando alquiler con el local cerrado. Detectaron que el croquis no coincidía antes de entregarlo. ¡Nos ahorraron semanas!"</p>
-                        <div class="flex items-center border-t border-slate-100 pt-4">
-                            <div class="w-10 h-10 bg-premium-dark text-white rounded-full flex items-center justify-center font-bold mr-3 text-sm">CM</div>
-                            <div>
-                                <p class="font-bold text-premium-dark text-sm">Carlos M.</p>
-                                <p class="text-xs text-slate-500">Gastrobar (Santa Ana)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
-                    <i class="fas fa-quote-left text-4xl text-slate-100 absolute top-6 left-6"></i>
-                    <div class="relative z-10">
-                        <div class="flex text-premium-gold mb-4">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-slate-700 italic mb-6 leading-relaxed text-sm">"El trámite de Salud y Patente me tenía estresadísima. Con la revisión de 4 horas supimos exactamente qué faltaba."</p>
-                        <div class="flex items-center border-t border-slate-100 pt-4">
-                            <div class="w-10 h-10 bg-premium-emerald text-white rounded-full flex items-center justify-center font-bold mr-3 text-sm">AV</div>
-                            <div>
-                                <p class="font-bold text-premium-dark text-sm">Andrea V.</p>
-                                <p class="text-xs text-slate-500">Estética & Spa (Escazú)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial 3 (New from Gemini) -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
-                    <i class="fas fa-quote-left text-4xl text-slate-100 absolute top-6 left-6"></i>
-                    <div class="relative z-10">
-                        <div class="flex text-premium-gold mb-4">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-slate-700 italic mb-6 leading-relaxed text-sm">"Servicio directo y al grano por WhatsApp. Envié los papeles en la mañana y al mediodía tenía el reporte listo."</p>
-                        <div class="flex items-center border-t border-slate-100 pt-4">
-                            <div class="w-10 h-10 bg-slate-700 text-white rounded-full flex items-center justify-center font-bold mr-3 text-sm">RS</div>
-                            <div>
-                                <p class="font-bold text-premium-dark text-sm">Roberto S.</p>
-                                <p class="text-xs text-slate-500">Retail (San José)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- OBJECTION KILLERS (FAQ) -->
-    <section class="bg-white py-20 px-4">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-center text-premium-dark mb-12">¿Por qué confiar en nosotros?</h2>
-            
-            <div class="space-y-6">
-                <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 md:p-8">
-                    <h3 class="font-bold text-lg text-premium-dark mb-3 flex items-start">
-                        <i class="fas fa-comment-dots text-premium-emerald mt-1 mr-4"></i> 
-                        "¿Y si mi expediente está muy mal?"
-                    </h3>
-                    <p class="text-slate-600 ml-9 leading-relaxed">No se preocupe. El 80% de los expedientes que recibimos tienen errores. Para eso es la pre-auditoría. Le diremos exactamente qué corregir antes de que la Muni lo rechace y pierda tiempo valioso.</p>
-                </div>
-                
-                <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 md:p-8">
-                    <h3 class="font-bold text-lg text-premium-dark mb-3 flex items-start">
-                        <i class="fas fa-comment-dots text-premium-emerald mt-1 mr-4"></i> 
-                        "¿Es legal? ¿Quiénes son ustedes?"
-                    </h3>
-                    <p class="text-slate-600 ml-9 leading-relaxed">Contamos con asesores legales especializados en derecho municipal en Costa Rica. No hacemos inventos; revisamos que todo cumpla con la ley y los requisitos específicos de cada Municipalidad.</p>
-                </div>
-
-                <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 md:p-8">
-                    <h3 class="font-bold text-lg text-premium-dark mb-3 flex items-start">
-                        <i class="fas fa-comment-dots text-premium-emerald mt-1 mr-4"></i> 
-                        "¿Por qué cobran ₡10,000?"
-                    </h3>
-                    <p class="text-slate-600 ml-9 leading-relaxed">Porque valoramos nuestro tiempo y su urgencia. Es una tarifa simbólica para filtrar casos y darle un servicio serio. Si decidimos tramitar su patente completa, esos ₡10,000 se le rebajan del precio final.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BOTTOM CTA -->
-    <section class="bg-premium-dark py-20 px-4 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">¿Listo para abrir su local?</h2>
-            <p class="text-slate-300 mb-10 text-lg font-light">Deje de perder dinero por trámites estancados. Haga su pre-auditoría hoy mismo.</p>
-            <a href="https://wa.me/50663889598?text=Hola,%20necesito%20ayuda%20con%20mi%20patente%20municipal.%20%C2%BFMe%20pueden%20hacer%20la%20pre-auditor%C3%ADa%3F" target="_blank" class="premium-btn inline-flex items-center justify-center bg-premium-emerald text-white font-semibold py-4 px-10 rounded-lg shadow-lg text-lg">
-                <i class="fab fa-whatsapp text-2xl mr-3"></i> Hablemos por WhatsApp
+          <div class="flex items-center gap-2">
+            <button
+              @click="toggleLang()"
+              class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition"
+              :aria-label="lang === 'es' ? 'Switch to English' : 'Cambiar a Español'"
+            >
+              <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+              <span x-text="lang === 'es' ? 'EN' : 'ES'">EN</span>
+            </button>
+            <a
+              href="#solicitar"
+              class="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold px-4 py-2 rounded-full bg-emerald-400 text-slate-950 hover:bg-emerald-300 hover:-translate-y-0.5 transition shadow-lg shadow-emerald-500/20"
+            >
+              <span class="lang-es">Solicitar</span><span class="lang-en">Get started</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
-        </div>
-    </section>
+            <button @click="menu = !menu" class="md:hidden p-2 rounded-lg hover:bg-white/5" aria-label="Menú" :aria-expanded="menu">
+              <span x-show="!menu"><i data-lucide="menu" class="w-5 h-5"></i></span>
+              <span x-show="menu" x-cloak><i data-lucide="x" class="w-5 h-5"></i></span>
+            </button>
+          </div>
+        </nav>
 
-    <!-- FOOTER -->
-    <footer class="bg-[#0b1120] text-slate-500 py-8 text-center text-sm font-light">
-        <p>&copy; 2024 Permiso Rápido CR. Todos los derechos reservados.</p>
-        <p class="mt-2">Especialistas en trámites municipales en Costa Rica.</p>
+        <!-- Mobile menu -->
+        <div
+          x-show="menu" x-cloak
+          x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+          x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0 -translate-y-2"
+          @click.outside="menu = false"
+          class="md:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-xl"
+        >
+          <div class="px-4 py-3 grid gap-1 text-sm font-medium" @click="menu = false">
+            <a href="#diagnostico" class="px-3 py-3 rounded-xl hover:bg-white/5"><span class="lang-es">Diagnóstico de Riesgo</span><span class="lang-en">Risk Diagnostic</span></a>
+            <a href="#calculadora" class="px-3 py-3 rounded-xl hover:bg-white/5"><span class="lang-es">Costo del Atraso</span><span class="lang-en">Cost of Delay</span></a>
+            <a href="#testimonios" class="px-3 py-3 rounded-xl hover:bg-white/5"><span class="lang-es">Testimonios</span><span class="lang-en">Reviews</span></a>
+            <a href="#como-funciona" class="px-3 py-3 rounded-xl hover:bg-white/5"><span class="lang-es">Cómo funciona</span><span class="lang-en">How it works</span></a>
+            <a href="#faq" class="px-3 py-3 rounded-xl hover:bg-white/5">FAQ</a>
+            <a href="#solicitar" class="mt-1 px-3 py-3 rounded-xl bg-emerald-400 text-slate-950 font-bold text-center"><span class="lang-es">Solicitar Pre-Auditoría</span><span class="lang-en">Request Pre-Audit</span></a>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <main id="top" class="relative pt-24 overflow-x-clip">
+      <!-- Ambient background -->
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-[900px] bg-grid"></div>
+      <div class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full bg-emerald-500/20 blur-[140px]"></div>
+      <div class="pointer-events-none absolute top-[420px] -right-40 w-[500px] h-[500px] rounded-full bg-cyan-500/10 blur-[120px]"></div>
+
+      <!-- ============ HERO ============ -->
+      <section class="relative max-w-6xl mx-auto px-4 pt-12 md:pt-20 pb-16 md:pb-24">
+        <div class="grid lg:grid-cols-[1.15fr_.85fr] gap-12 lg:gap-10 items-center">
+          <div class="text-center lg:text-left">
+            <div class="reveal inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/25 text-amber-300 text-xs font-semibold mb-6">
+              <span class="relative flex h-2 w-2">
+                <span class="absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75 animate-ping"></span>
+                <span class="relative inline-flex h-2 w-2 rounded-full bg-amber-400"></span>
+              </span>
+              <span class="lang-es">Evite hasta 40 días de atraso en la Municipalidad</span>
+              <span class="lang-en">Avoid up to 40 days of delay at the Municipality</span>
+            </div>
+
+            <h1 class="reveal text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6" style="transition-delay:.05s">
+              <span class="lang-es">¿Pagando alquiler con el local cerrado?
+                <span class="block mt-2 bg-gradient-to-r from-emerald-300 via-emerald-400 to-cyan-300 bg-clip-text text-transparent">Pre-auditamos la patente de su negocio.</span>
+              </span>
+              <span class="lang-en">Paying rent with a closed venue?
+                <span class="block mt-2 bg-gradient-to-r from-emerald-300 via-emerald-400 to-cyan-300 bg-clip-text text-transparent">We pre-audit your business permit.</span>
+              </span>
+            </h1>
+
+            <p class="reveal text-slate-400 text-base md:text-lg max-w-xl mx-auto lg:mx-0 mb-9 leading-relaxed" style="transition-delay:.1s">
+              <span class="lang-es">Abrir un restaurante, tienda o comercio en San José, Escazú o Santa Ana no debería atrasarse por un papel vencido. Validamos su expediente completo en <strong class="text-slate-200">menos de 4 horas</strong>.</span>
+              <span class="lang-en">Opening a restaurant, shop, or business in San José, Escazú, or Santa Ana shouldn't be delayed by expired paperwork. We validate your entire permit file in <strong class="text-slate-200">under 4 hours</strong>.</span>
+            </p>
+
+            <div class="reveal flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-4" style="transition-delay:.15s">
+              <a
+                href="https://wa.me/50663889598?text=Hola%2C%20quiero%20solicitar%20una%20consulta%20de%20Pre-Auditor%C3%ADa%20para%20mi%20patente%20comercial."
+                target="_blank" rel="noopener noreferrer"
+                data-umami-event="WhatsApp-Hero-CTA-Click"
+                class="group relative overflow-hidden inline-flex items-center justify-center gap-3 bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-extrabold text-base md:text-lg py-4 px-7 rounded-2xl shadow-2xl shadow-emerald-500/30 hover:-translate-y-0.5 active:translate-y-0 transition"
+              >
+                <span class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer"></span>
+                <svg class="relative w-6 h-6"><use href="#wa"/></svg>
+                <span class="relative lang-es">Consulta Gratis por WhatsApp</span>
+                <span class="relative lang-en">Free Consultation via WhatsApp</span>
+              </a>
+              <a
+                href="#diagnostico"
+                data-umami-event="Hero-Quiz-CTA-Click"
+                class="inline-flex items-center justify-center gap-2 font-bold py-4 px-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 transition"
+              >
+                <i data-lucide="sparkles" class="w-5 h-5 text-emerald-300"></i>
+                <span class="lang-es">Evaluar mi riesgo (1 min)</span>
+                <span class="lang-en">Check my risk (1 min)</span>
+              </a>
+            </div>
+            <p class="reveal text-xs text-slate-500 mb-10" style="transition-delay:.2s">
+              <span class="lang-es">Respuesta inmediata · Sin compromiso</span>
+              <span class="lang-en">Immediate response · No obligation</span>
+            </p>
+
+            <!-- Trust strip -->
+            <div class="reveal grid grid-cols-3 gap-2 sm:gap-3 max-w-xl mx-auto lg:mx-0" style="transition-delay:.25s">
+              <div class="rounded-2xl border border-white/5 bg-white/[.03] p-3 sm:p-4 text-center lg:text-left">
+                <i data-lucide="timer" class="w-5 h-5 text-emerald-300 mb-2 mx-auto lg:mx-0"></i>
+                <p class="text-[11px] sm:text-xs font-semibold text-slate-300 leading-tight"><span class="lang-es">Informe en &lt; 4 Horas</span><span class="lang-en">Report in &lt; 4 Hours</span></p>
+              </div>
+              <div class="rounded-2xl border border-white/5 bg-white/[.03] p-3 sm:p-4 text-center lg:text-left">
+                <i data-lucide="lock" class="w-5 h-5 text-emerald-300 mb-2 mx-auto lg:mx-0"></i>
+                <p class="text-[11px] sm:text-xs font-semibold text-slate-300 leading-tight"><span class="lang-es">100% Confidencial</span><span class="lang-en">100% Confidential</span></p>
+              </div>
+              <div class="rounded-2xl border border-white/5 bg-white/[.03] p-3 sm:p-4 text-center lg:text-left">
+                <i data-lucide="wallet" class="w-5 h-5 text-emerald-300 mb-2 mx-auto lg:mx-0"></i>
+                <p class="text-[11px] sm:text-xs font-semibold text-slate-300 leading-tight"><span class="lang-es">Inversión Única ₡10,000</span><span class="lang-en">One-Time ₡10,000</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero visual: sample report card -->
+          <div class="reveal relative mx-auto w-full max-w-md" style="transition-delay:.2s">
+            <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-emerald-400/20 to-cyan-400/10 blur-2xl"></div>
+            <div class="relative animate-floatY rounded-3xl border border-white/10 bg-slate-900/80 backdrop-blur-xl p-6 shadow-2xl shadow-black/50">
+              <div class="flex items-center justify-between mb-5">
+                <div class="flex items-center gap-3">
+                  <span class="grid place-items-center w-10 h-10 rounded-xl bg-emerald-400/10 border border-emerald-400/20 text-emerald-300">
+                    <i data-lucide="file-search" class="w-5 h-5"></i>
+                  </span>
+                  <div>
+                    <p class="text-sm font-bold"><span class="lang-es">Reporte de Pre-Auditoría</span><span class="lang-en">Pre-Audit Report</span></p>
+                    <p class="text-[11px] text-slate-500"><span class="lang-es">Ejemplo ilustrativo</span><span class="lang-en">Illustrative example</span></p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono font-bold px-2 py-1 rounded-md bg-white/5 border border-white/10 text-slate-400">3h 12m</span>
+              </div>
+
+              <ul class="space-y-2.5 mb-5">
+                <template x-for="(item, i) in heroChecks" :key="i">
+                  <li
+                    class="flex items-center justify-between gap-3 rounded-xl border px-3.5 py-3 text-sm transition-all duration-500"
+                    :class="i < heroStep ? (item.ok ? 'border-emerald-400/20 bg-emerald-400/[.06]' : 'border-amber-400/25 bg-amber-400/[.07]') : 'border-white/5 bg-white/[.02] opacity-50'"
+                  >
+                    <span class="font-medium text-slate-200" x-text="t(item.label)"></span>
+                    <span
+                      class="shrink-0 text-[11px] font-bold px-2 py-0.5 rounded-full transition-all"
+                      :class="i < heroStep ? (item.ok ? 'bg-emerald-400/15 text-emerald-300' : 'bg-amber-400/15 text-amber-300') : 'bg-white/5 text-slate-500'"
+                      x-text="i < heroStep ? t(item.status) : '…'"
+                    ></span>
+                  </li>
+                </template>
+              </ul>
+
+              <div class="rounded-2xl p-4 border transition-all duration-500"
+                   :class="heroStep >= heroChecks.length ? 'border-emerald-400/30 bg-emerald-400/10' : 'border-white/5 bg-white/[.02]'">
+                <div class="flex items-center justify-between text-xs mb-2">
+                  <span class="font-semibold text-slate-300"><span class="lang-es">Estado del expediente</span><span class="lang-en">File status</span></span>
+                  <span class="font-bold" :class="heroStep >= heroChecks.length ? 'text-emerald-300' : 'text-slate-500'"
+                        x-text="heroStep >= heroChecks.length ? t({es:'1 corrección antes de presentar', en:'1 fix before submitting'}) : t({es:'Analizando…', en:'Analyzing…'})"></span>
+                </div>
+                <div class="h-1.5 rounded-full bg-white/5 overflow-hidden">
+                  <div class="h-full rounded-full bg-gradient-to-r from-emerald-400 to-cyan-300 transition-all duration-700"
+                       :style="`width:${Math.min(100, heroStep / heroChecks.length * 100)}%`"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating badge -->
+            <div class="absolute -bottom-5 -left-3 sm:-left-8 flex items-center gap-2 rounded-2xl border border-white/10 bg-slate-900/95 backdrop-blur px-3.5 py-2.5 shadow-xl">
+              <i data-lucide="shield-check" class="w-5 h-5 text-emerald-300"></i>
+              <p class="text-xs font-bold leading-tight"><span class="lang-es">Garantía 100%<br /><span class="font-medium text-slate-400">de devolución</span></span><span class="lang-en">100% money-back<br /><span class="font-medium text-slate-400">guarantee</span></span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SOCIAL PROOF & GUARANTEE ============ -->
+      <section class="relative border-y border-white/5 bg-white/[.015]">
+        <div class="max-w-6xl mx-auto px-4 py-8 grid md:grid-cols-[auto_1fr] gap-6 md:gap-10 items-center">
+          <div class="reveal flex items-center gap-4 justify-center md:justify-start">
+            <div class="flex -space-x-2">
+              <span class="grid place-items-center w-9 h-9 rounded-full bg-emerald-500 text-slate-950 text-xs font-bold ring-2 ring-slate-950">SJ</span>
+              <span class="grid place-items-center w-9 h-9 rounded-full bg-cyan-400 text-slate-950 text-xs font-bold ring-2 ring-slate-950">ES</span>
+              <span class="grid place-items-center w-9 h-9 rounded-full bg-amber-400 text-slate-950 text-xs font-bold ring-2 ring-slate-950">SA</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-0.5 text-amber-400" aria-hidden="true">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-sm font-semibold text-slate-200">
+                <span class="lang-es">Más de 50+ patentes revisadas</span><span class="lang-en">Over 50+ permits reviewed</span>
+              </p>
+            </div>
+          </div>
+          <div class="reveal flex items-start gap-3 rounded-2xl border border-emerald-400/20 bg-emerald-400/[.05] p-4 md:p-5" style="transition-delay:.08s">
+            <i data-lucide="shield-check" class="w-6 h-6 text-emerald-300 shrink-0 mt-0.5"></i>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              <span class="lang-es"><strong class="text-emerald-300">Garantía 100%:</strong> Si su expediente es rechazado por un error de forma que no detectemos, le devolvemos el 100% de su dinero.</span>
+              <span class="lang-en"><strong class="text-emerald-300">100% Guarantee:</strong> If your file is rejected due to a formal error we failed to detect, we refund 100% of your money.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ RISK QUIZ ============ -->
+      <section id="diagnostico" class="relative max-w-6xl mx-auto px-4 py-20 md:py-28">
+        <div class="grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-16 items-start">
+          <div class="reveal lg:sticky lg:top-32 text-center lg:text-left">
+            <p class="text-xs font-bold uppercase tracking-[.2em] text-emerald-300 mb-3"><span class="lang-es">Diagnóstico gratuito</span><span class="lang-en">Free diagnostic</span></p>
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+              <span class="lang-es">¿Qué tan probable es que le rechacen el trámite?</span>
+              <span class="lang-en">How likely is your permit to be rejected?</span>
+            </h2>
+            <p class="text-slate-400 leading-relaxed mb-6">
+              <span class="lang-es">Cinco preguntas rápidas sobre los puntos que más rechazos causan: Uso de Suelo, Plano Catastrado y Permiso de Salud.</span>
+              <span class="lang-en">Five quick questions about the items behind most rejections: Land Use, Cadastral Plan, and Health Permit.</span>
+            </p>
+            <ul class="hidden lg:grid gap-3 text-sm text-slate-300">
+              <li class="flex items-center gap-3"><span class="grid place-items-center w-8 h-8 rounded-lg bg-white/5 border border-white/10"><i data-lucide="map" class="w-4 h-4 text-emerald-300"></i></span><span class="lang-es">Uso de Suelo conforme</span><span class="lang-en">Land Use compliance</span></li>
+              <li class="flex items-center gap-3"><span class="grid place-items-center w-8 h-8 rounded-lg bg-white/5 border border-white/10"><i data-lucide="landmark" class="w-4 h-4 text-emerald-300"></i></span><span class="lang-es">Plano Catastrado coincidente</span><span class="lang-en">Matching Cadastral Plan</span></li>
+              <li class="flex items-center gap-3"><span class="grid place-items-center w-8 h-8 rounded-lg bg-white/5 border border-white/10"><i data-lucide="stethoscope" class="w-4 h-4 text-emerald-300"></i></span><span class="lang-es">Permiso Sanitario vigente</span><span class="lang-en">Valid Health Permit</span></li>
+              <li class="flex items-center gap-3"><span class="grid place-items-center w-8 h-8 rounded-lg bg-white/5 border border-white/10"><i data-lucide="receipt" class="w-4 h-4 text-emerald-300"></i></span><span class="lang-es">Al día con CCSS y Hacienda</span><span class="lang-en">Current with CCSS &amp; Hacienda</span></li>
+            </ul>
+          </div>
+
+          <div x-data="quiz()" class="reveal relative" style="transition-delay:.1s">
+            <div class="absolute -inset-px rounded-[1.75rem] bg-gradient-to-b from-emerald-400/30 via-white/5 to-transparent"></div>
+            <div class="relative rounded-[1.75rem] bg-slate-900/90 backdrop-blur-xl p-6 md:p-8 shadow-2xl shadow-black/40 min-h-[460px] flex flex-col">
+              <!-- Progress -->
+              <div class="mb-7">
+                <div class="flex items-center justify-between text-xs font-semibold mb-2.5">
+                  <span class="text-slate-400" x-show="!done">
+                    <span class="lang-es">Pregunta</span><span class="lang-en">Question</span>
+                    <span class="text-slate-200" x-text="step + 1"></span>/<span x-text="questions.length"></span>
+                  </span>
+                  <span class="text-emerald-300" x-show="done" x-cloak><span class="lang-es">Resultado listo</span><span class="lang-en">Result ready</span></span>
+                  <span class="font-mono text-slate-500" x-text="Math.round(progress) + '%'"></span>
+                </div>
+                <div class="h-2 rounded-full bg-white/5 overflow-hidden">
+                  <div class="h-full rounded-full bg-gradient-to-r from-emerald-400 to-cyan-300 transition-all duration-500 ease-out" :style="`width:${progress}%`"></div>
+                </div>
+              </div>
+
+              <!-- Questions -->
+              <div x-show="!done" class="flex-1 flex flex-col" :style="`--dir:${dir}`">
+                <template x-for="q in [questions[step]]" :key="step">
+                  <div class="animate-slideIn flex-1 flex flex-col">
+                    <span class="inline-flex self-start items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 mb-4" x-text="t(q.tag)"></span>
+                    <h3 class="text-xl md:text-2xl font-bold leading-snug mb-2" x-text="t(q.q)"></h3>
+                    <p class="text-sm text-slate-400 mb-6" x-show="q.hint" x-text="q.hint ? t(q.hint) : ''"></p>
+
+                    <div class="grid gap-3" :class="q.opts.length > 3 ? 'sm:grid-cols-2' : ''">
+                      <template x-for="(o, i) in q.opts" :key="i">
+                        <button
+                          type="button"
+                          @click="select(i)"
+                          class="group flex items-center gap-4 w-full text-left rounded-2xl border px-4 py-4 transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+                          :class="answers[step] === i ? 'border-emerald-400 bg-emerald-400/10 shadow-lg shadow-emerald-500/10' : 'border-white/10 bg-white/[.02] hover:border-white/25 hover:bg-white/[.05]'"
+                        >
+                          <span
+                            class="grid place-items-center shrink-0 w-8 h-8 rounded-lg text-xs font-bold border transition"
+                            :class="answers[step] === i ? 'bg-emerald-400 text-slate-950 border-emerald-400' : 'border-white/15 text-slate-400 group-hover:text-slate-200'"
+                            x-text="'ABCD'[i]"
+                          ></span>
+                          <span class="text-sm md:text-[15px] font-medium text-slate-200" x-text="t(o.label)"></span>
+                        </button>
+                      </template>
+                    </div>
+                  </div>
+                </template>
+
+                <div class="flex items-center justify-between mt-6 pt-5 border-t border-white/5">
+                  <button type="button" @click="back()" :disabled="step === 0"
+                          class="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-400 hover:text-white disabled:opacity-0 transition">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i><span class="lang-es">Atrás</span><span class="lang-en">Back</span>
+                  </button>
+                  <span class="text-xs text-slate-500"><span class="lang-es">100% anónimo</span><span class="lang-en">100% anonymous</span></span>
+                </div>
+              </div>
+
+              <!-- Result -->
+              <div x-show="done" x-cloak class="flex-1 flex flex-col animate-slideIn">
+                <div class="flex flex-col sm:flex-row items-center gap-6 mb-6">
+                  <div class="relative w-36 h-36 shrink-0">
+                    <svg viewBox="0 0 120 120" class="w-full h-full -rotate-90">
+                      <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="10" />
+                      <circle cx="60" cy="60" r="52" fill="none" stroke-width="10" stroke-linecap="round"
+                              :stroke="level.color" stroke-dasharray="326.73"
+                              :stroke-dashoffset="326.73 * (1 - gauge / 100)" />
+                    </svg>
+                    <div class="absolute inset-0 grid place-items-center text-center">
+                      <div>
+                        <p class="text-3xl font-extrabold" x-text="Math.round(gauge) + '%'"></p>
+                        <p class="text-[10px] uppercase tracking-wider text-slate-400"><span class="lang-es">riesgo</span><span class="lang-en">risk</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center sm:text-left">
+                    <span class="inline-block text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full mb-2" :class="level.badge" x-text="t(level.label)"></span>
+                    <p class="text-slate-300 text-sm leading-relaxed" x-text="t(level.text)"></p>
+                  </div>
+                </div>
+
+                <div class="rounded-2xl border border-white/5 bg-white/[.02] p-4 mb-6" x-show="flags.length">
+                  <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3"><span class="lang-es">Puntos a revisar</span><span class="lang-en">Items to review</span></p>
+                  <ul class="space-y-2">
+                    <template x-for="f in flags" :key="f.key">
+                      <li class="flex items-start gap-2.5 text-sm">
+                        <span class="mt-1.5 w-2 h-2 rounded-full shrink-0" :class="f.severe ? 'bg-red-400' : 'bg-amber-400'"></span>
+                        <span class="text-slate-300" x-text="t(f.text)"></span>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
+                <div class="rounded-2xl border border-emerald-400/20 bg-emerald-400/[.05] p-4 mb-6 text-sm text-slate-300" x-show="!flags.length">
+                  <span class="lang-es">No detectamos alertas en sus respuestas. Una pre-auditoría confirma fechas de vencimiento y la checklist exacta de su municipalidad.</span>
+                  <span class="lang-en">No red flags in your answers. A pre-audit confirms expiration dates and your municipality's exact checklist.</span>
+                </div>
+
+                <div class="mt-auto grid sm:grid-cols-[1fr_auto] gap-3">
+                  <a :href="waLink" target="_blank" rel="noopener noreferrer" data-umami-event="WhatsApp-Risk-Quiz-Click"
+                     class="inline-flex items-center justify-center gap-2 bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-extrabold py-4 px-5 rounded-2xl shadow-lg shadow-emerald-500/25 hover:-translate-y-0.5 transition">
+                    <svg class="w-5 h-5"><use href="#wa"/></svg>
+                    <span class="lang-es">Enviar resultado a un asesor</span><span class="lang-en">Send result to an advisor</span>
+                  </a>
+                  <button type="button" @click="restart()"
+                          class="inline-flex items-center justify-center gap-2 font-semibold py-4 px-5 rounded-2xl border border-white/10 hover:bg-white/5 transition">
+                    <i data-lucide="rotate-ccw" class="w-4 h-4"></i><span class="lang-es">Repetir</span><span class="lang-en">Retake</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ COST OF DELAY CALCULATOR ============ -->
+      <section id="calculadora" class="relative py-20 md:py-28 border-t border-white/5 bg-gradient-to-b from-slate-900/40 to-transparent">
+        <div class="max-w-6xl mx-auto px-4" x-data="calc()" x-init="init()">
+          <div class="reveal text-center max-w-2xl mx-auto mb-12">
+            <p class="text-xs font-bold uppercase tracking-[.2em] text-red-300 mb-3"><span class="lang-es">Costo del atraso</span><span class="lang-en">Cost of delay</span></p>
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+              <span class="lang-es">¿Cuánto le cuesta cada semana con el local cerrado?</span>
+              <span class="lang-en">What does each closed week really cost you?</span>
+            </h2>
+            <p class="text-slate-400"><span class="lang-es">Mueva el control a su alquiler mensual. Un rechazo por un documento vencido puede atrasar la patente hasta 40 días.</span><span class="lang-en">Slide to your monthly rent. A rejection over one expired document can delay your permit up to 40 days.</span></p>
+          </div>
+
+          <div class="reveal grid lg:grid-cols-2 gap-6" style="transition-delay:.08s">
+            <!-- Inputs -->
+            <div class="rounded-[1.75rem] border border-white/10 bg-slate-900/80 p-6 md:p-8">
+              <div class="mb-9">
+                <div class="flex items-end justify-between mb-4">
+                  <label for="rent" class="text-sm font-semibold text-slate-300"><span class="lang-es">Alquiler mensual</span><span class="lang-en">Monthly rent</span></label>
+                  <span class="text-2xl md:text-3xl font-extrabold tabular-nums" x-text="fmt(rent)"></span>
+                </div>
+                <input id="rent" type="range" class="range" min="100000" max="5000000" step="50000" x-model.number="rent"
+                       :style="`--p:${(rent - 100000) / (5000000 - 100000) * 100}%`" />
+                <div class="flex justify-between text-[11px] text-slate-500 mt-2 font-mono"><span>₡100k</span><span>₡5M</span></div>
+              </div>
+
+              <div class="mb-8">
+                <div class="flex items-end justify-between mb-4">
+                  <label for="weeks" class="text-sm font-semibold text-slate-300"><span class="lang-es">Semanas esperando la patente</span><span class="lang-en">Weeks waiting on the permit</span></label>
+                  <span class="text-2xl md:text-3xl font-extrabold tabular-nums">
+                    <span x-text="weeks"></span> <span class="text-base font-semibold text-slate-400"><span class="lang-es">sem.</span><span class="lang-en">wk</span></span>
+                  </span>
+                </div>
+                <input id="weeks" type="range" class="range" min="1" max="12" step="1" x-model.number="weeks"
+                       :style="`--p:${(weeks - 1) / 11 * 100}%`" />
+                <div class="flex justify-between text-[11px] text-slate-500 mt-2 font-mono"><span>1</span><span class="text-amber-300/80"><span class="lang-es">~6 = 40 días</span><span class="lang-en">~6 = 40 days</span></span><span>12</span></div>
+              </div>
+
+              <!-- Weekly bars -->
+              <div class="flex items-end gap-1.5 h-24" aria-hidden="true">
+                <template x-for="w in 12" :key="w">
+                  <div class="flex-1 rounded-t-md transition-all duration-500 ease-out"
+                       :style="`height:${w / 12 * 100}%; transition-delay:${w * 25}ms`"
+                       :class="w <= weeks ? 'bg-gradient-to-t from-red-500/70 to-red-400' : 'bg-white/5'"></div>
+                </template>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-2 text-center"><span class="lang-es">Pérdida acumulada por semana</span><span class="lang-en">Accumulated loss per week</span></p>
+            </div>
+
+            <!-- Outputs -->
+            <div class="rounded-[1.75rem] border border-red-400/20 bg-gradient-to-br from-red-500/[.08] via-slate-900/80 to-slate-900/80 p-6 md:p-8 flex flex-col">
+              <div class="grid grid-cols-2 gap-3 mb-6">
+                <div class="rounded-2xl bg-black/30 border border-white/5 p-4">
+                  <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1"><span class="lang-es">Por semana</span><span class="lang-en">Per week</span></p>
+                  <p class="text-xl md:text-2xl font-extrabold text-red-300 tabular-nums" x-text="fmt(shown.weekly)"></p>
+                </div>
+                <div class="rounded-2xl bg-black/30 border border-white/5 p-4">
+                  <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1"><span class="lang-es">Por día</span><span class="lang-en">Per day</span></p>
+                  <p class="text-xl md:text-2xl font-extrabold text-red-300 tabular-nums" x-text="fmt(shown.daily)"></p>
+                </div>
+              </div>
+
+              <div class="rounded-2xl bg-black/30 border border-red-400/20 p-5 mb-6">
+                <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1 flex items-center gap-1.5">
+                  <i data-lucide="trending-down" class="w-4 h-4 text-red-400"></i>
+                  <span class="lang-es">Alquiler perdido con el local cerrado</span><span class="lang-en">Rent lost while closed</span>
+                </p>
+                <p class="text-4xl md:text-5xl font-extrabold tracking-tight text-white tabular-nums" x-text="fmt(shown.total)"></p>
+                <p class="text-sm text-slate-400 mt-1">
+                  <span class="lang-es">en</span><span class="lang-en">over</span>
+                  <span x-text="weeks"></span>
+                  <span class="lang-es">semanas, sin contar salarios ni ventas perdidas.</span><span class="lang-en">weeks, before salaries or lost sales.</span>
+                </p>
+              </div>
+
+              <div class="flex items-start gap-3 rounded-2xl border border-emerald-400/25 bg-emerald-400/[.07] p-4 mb-6">
+                <i data-lucide="zap" class="w-5 h-5 text-emerald-300 shrink-0 mt-0.5"></i>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  <span class="lang-es">La pre-auditoría cuesta <strong class="text-emerald-300">₡10,000</strong>: el equivalente a solo <strong class="text-white" x-text="hoursLabel"></strong> de su alquiler. El atraso le costaría <strong class="text-white" x-text="multiple + '×'"></strong> más.</span>
+                  <span class="lang-en">The pre-audit costs <strong class="text-emerald-300">₡10,000</strong>: the same as just <strong class="text-white" x-text="hoursLabel"></strong> of your rent. The delay would cost you <strong class="text-white" x-text="multiple + '×'"></strong> more.</span>
+                </p>
+              </div>
+
+              <a :href="waLink" target="_blank" rel="noopener noreferrer" data-umami-event="WhatsApp-Calculator-Click"
+                 class="mt-auto inline-flex items-center justify-center gap-2 bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-extrabold py-4 px-5 rounded-2xl shadow-lg shadow-emerald-500/25 hover:-translate-y-0.5 transition">
+                <svg class="w-5 h-5"><use href="#wa"/></svg>
+                <span class="lang-es">Proteger mi apertura por ₡10,000</span><span class="lang-en">Protect my opening for ₡10,000</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TESTIMONIALS ============ -->
+      <section id="testimonios" class="relative py-20 md:py-28 border-t border-white/5" x-data="carousel()">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="reveal flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 text-center md:text-left">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[.2em] text-emerald-300 mb-3"><span class="lang-es">Historias de éxito</span><span class="lang-en">Success stories</span></p>
+              <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+                <span class="lang-es">Negocios que abrieron a tiempo</span><span class="lang-en">Businesses that opened on time</span>
+              </h2>
+            </div>
+            <div class="flex flex-wrap justify-center md:justify-end gap-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border border-white/10 bg-white/5"><i data-lucide="badge-check" class="w-4 h-4 text-emerald-300"></i><span class="lang-es">50+ patentes revisadas</span><span class="lang-en">50+ permits reviewed</span></span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border border-white/10 bg-white/5"><i data-lucide="shield-check" class="w-4 h-4 text-emerald-300"></i><span class="lang-es">Garantía 100%</span><span class="lang-en">100% guarantee</span></span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border border-white/10 bg-white/5"><i data-lucide="lock" class="w-4 h-4 text-emerald-300"></i><span class="lang-es">Confidencial</span><span class="lang-en">Confidential</span></span>
+            </div>
+          </div>
+
+          <!-- Swipeable on mobile, grid on desktop -->
+          <div
+            x-ref="track"
+            @scroll.debounce.60ms="onScroll()"
+            class="reveal -mx-4 px-4 flex md:grid md:grid-cols-3 gap-4 md:gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar"
+            style="transition-delay:.08s"
+          >
+            <article class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto group relative rounded-3xl border border-white/10 bg-slate-900/70 p-6 flex flex-col hover:-translate-y-1 hover:border-emerald-400/30 transition duration-300">
+              <i data-lucide="quote" class="absolute top-5 right-5 w-8 h-8 text-white/5 group-hover:text-emerald-400/20 transition"></i>
+              <div class="flex gap-0.5 text-amber-400 mb-4" aria-label="5/5"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+              <p class="text-[15px] text-slate-300 leading-relaxed flex-1 mb-6">
+                <span class="lang-es">"Me iban a rechazar el expediente por un permiso sanitario vencido que ni sabía. La pre-auditoría me ahorró semanas de atraso con el alquiler corriendo."</span>
+                <span class="lang-en">"My file was about to be rejected over a health permit expiration I didn't even know about. The pre-audit saved me weeks of delay while rent kept running."</span>
+              </p>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                <span class="grid place-items-center w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 text-slate-950 font-bold text-sm">CM</span>
+                <div>
+                  <p class="text-sm font-bold">Carlos M.</p>
+                  <p class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="map-pin" class="w-3 h-3"></i>Santa Ana</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto group relative rounded-3xl border border-white/10 bg-slate-900/70 p-6 flex flex-col hover:-translate-y-1 hover:border-emerald-400/30 transition duration-300">
+              <i data-lucide="quote" class="absolute top-5 right-5 w-8 h-8 text-white/5 group-hover:text-emerald-400/20 transition"></i>
+              <div class="flex gap-0.5 text-amber-400 mb-4" aria-label="5/5"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+              <p class="text-[15px] text-slate-300 leading-relaxed flex-1 mb-6">
+                <span class="lang-es">"Rápido, claro y directo por WhatsApp. En menos de 4 horas tenía la lista exacta de lo que faltaba para mi local en Escazú."</span>
+                <span class="lang-en">"Fast, clear, and straight to the point over WhatsApp. In under 4 hours I had the exact list of what was missing for my Escazú location."</span>
+              </p>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                <span class="grid place-items-center w-10 h-10 rounded-full bg-gradient-to-br from-cyan-300 to-cyan-500 text-slate-950 font-bold text-sm">AV</span>
+                <div>
+                  <p class="text-sm font-bold">Andrea V.</p>
+                  <p class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="map-pin" class="w-3 h-3"></i>Escazú</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto group relative rounded-3xl border border-white/10 bg-slate-900/70 p-6 flex flex-col hover:-translate-y-1 hover:border-emerald-400/30 transition duration-300">
+              <i data-lucide="quote" class="absolute top-5 right-5 w-8 h-8 text-white/5 group-hover:text-emerald-400/20 transition"></i>
+              <div class="flex gap-0.5 text-amber-400 mb-4" aria-label="5/5"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+              <p class="text-[15px] text-slate-300 leading-relaxed flex-1 mb-6">
+                <span class="lang-es">"Presenté el trámite con luz verde de PermisoRápido y la municipalidad lo aprobó sin observaciones. Vale cada colón."</span>
+                <span class="lang-en">"I submitted with PermisoRápido's green light and the municipality approved it with zero observations. Worth every colón."</span>
+              </p>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                <span class="grid place-items-center w-10 h-10 rounded-full bg-gradient-to-br from-amber-300 to-amber-500 text-slate-950 font-bold text-sm">RS</span>
+                <div>
+                  <p class="text-sm font-bold">Roberto S.</p>
+                  <p class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="map-pin" class="w-3 h-3"></i>San José</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Carousel dots (mobile) -->
+          <div class="flex md:hidden justify-center gap-2 mt-6">
+            <template x-for="i in 3" :key="i">
+              <button type="button" @click="go(i - 1)" :aria-label="'Testimonio ' + i"
+                      class="h-2 rounded-full transition-all duration-300"
+                      :class="active === i - 1 ? 'w-7 bg-emerald-400' : 'w-2 bg-white/20'"></button>
+            </template>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ HOW IT WORKS ============ -->
+      <section id="como-funciona" class="relative py-20 md:py-28 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="reveal text-center max-w-2xl mx-auto mb-14">
+            <p class="text-xs font-bold uppercase tracking-[.2em] text-emerald-300 mb-3"><span class="lang-es">Proceso</span><span class="lang-en">Process</span></p>
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight"><span class="lang-es">¿Cómo funciona el servicio?</span><span class="lang-en">How does it work?</span></h2>
+          </div>
+
+          <div class="relative grid md:grid-cols-3 gap-5">
+            <div class="hidden md:block absolute top-10 left-[16%] right-[16%] h-px bg-gradient-to-r from-emerald-400/0 via-emerald-400/40 to-emerald-400/0"></div>
+
+            <div class="reveal relative rounded-3xl border border-white/10 bg-slate-900/70 p-6 hover:border-emerald-400/30 transition">
+              <span class="relative grid place-items-center w-14 h-14 rounded-2xl bg-slate-950 border border-emerald-400/30 text-emerald-300 mb-5 shadow-lg shadow-emerald-500/10">
+                <i data-lucide="send" class="w-6 h-6"></i>
+                <span class="absolute -top-2 -right-2 grid place-items-center w-6 h-6 rounded-full bg-emerald-400 text-slate-950 text-xs font-extrabold">1</span>
+              </span>
+              <h3 class="font-bold text-lg mb-2"><span class="lang-es">Envíe sus documentos</span><span class="lang-en">Send your documents</span></h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                <span class="lang-es">Nos adjunta por WhatsApp las fotos o PDF de sus requisitos (personería, permiso de salud, contrato, plano, etc.).</span>
+                <span class="lang-en">Send us photos or PDFs of your documents via WhatsApp (corporate ID, health permit, lease, layout, etc.).</span>
+              </p>
+            </div>
+
+            <div class="reveal relative rounded-3xl border border-white/10 bg-slate-900/70 p-6 hover:border-emerald-400/30 transition" style="transition-delay:.1s">
+              <span class="relative grid place-items-center w-14 h-14 rounded-2xl bg-slate-950 border border-emerald-400/30 text-emerald-300 mb-5 shadow-lg shadow-emerald-500/10">
+                <i data-lucide="file-search" class="w-6 h-6"></i>
+                <span class="absolute -top-2 -right-2 grid place-items-center w-6 h-6 rounded-full bg-emerald-400 text-slate-950 text-xs font-extrabold">2</span>
+              </span>
+              <h3 class="font-bold text-lg mb-2"><span class="lang-es">Auditoría en &lt; 4 hrs</span><span class="lang-en">Audit in &lt; 4 hrs</span></h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                <span class="lang-es">Cotejamos fechas de vencimiento, estar al día con CCSS/Hacienda y la checklist exacta de la municipalidad.</span>
+                <span class="lang-en">We verify expiration dates, CCSS/Tax standing, and exact municipal checklists to avoid rejection.</span>
+              </p>
+            </div>
+
+            <div class="reveal relative rounded-3xl border border-white/10 bg-slate-900/70 p-6 hover:border-emerald-400/30 transition" style="transition-delay:.2s">
+              <span class="relative grid place-items-center w-14 h-14 rounded-2xl bg-slate-950 border border-emerald-400/30 text-emerald-300 mb-5 shadow-lg shadow-emerald-500/10">
+                <i data-lucide="circle-check" class="w-6 h-6"></i>
+                <span class="absolute -top-2 -right-2 grid place-items-center w-6 h-6 rounded-full bg-emerald-400 text-slate-950 text-xs font-extrabold">3</span>
+              </span>
+              <h3 class="font-bold text-lg mb-2"><span class="lang-es">Dictamen Previo</span><span class="lang-en">Pre-Audit Report</span></h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                <span class="lang-es">Le entregamos nuestro reporte de pre-auditoría privada: luz verde para presentar o la lista exacta de observaciones a corregir.</span>
+                <span class="lang-en">We send our private pre-audit report: green light to submit or the exact list of observations to correct.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ REQUEST FORM ============ -->
+      <section id="solicitar" class="relative py-20 md:py-28 border-t border-white/5">
+        <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(16,185,129,.12),transparent_60%)]"></div>
+        <div class="relative max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+          <div class="reveal text-center lg:text-left">
+            <p class="text-xs font-bold uppercase tracking-[.2em] text-emerald-300 mb-3"><span class="lang-es">Empiece hoy</span><span class="lang-en">Start today</span></p>
+            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-5">
+              <span class="lang-es">Presente su patente con <span class="text-emerald-300">luz verde</span>.</span>
+              <span class="lang-en">Submit your permit with a <span class="text-emerald-300">green light</span>.</span>
+            </h2>
+            <p class="text-slate-400 leading-relaxed mb-6 max-w-lg mx-auto lg:mx-0">
+              <span class="lang-es">Verificación experta contra el reglamento municipal vigente. Pago único vía SINPE Móvil o transferencia.</span>
+              <span class="lang-en">Expert verification against current municipal bylaws. One-time payment via SINPE Móvil or bank transfer.</span>
+            </p>
+            <ul class="grid gap-2.5 text-sm text-slate-300 max-w-sm mx-auto lg:mx-0 text-left">
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-300"></i><span class="lang-es">Respuesta en &lt; 4 horas</span><span class="lang-en">Response in &lt; 4 hours</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-300"></i><span class="lang-es">Revisión 100% Confidencial</span><span class="lang-en">100% Confidential Review</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-emerald-300"></i><span class="lang-es">Válido para San José, Escazú y Santa Ana</span><span class="lang-en">Valid for San José, Escazú, and Santa Ana</span></li>
+            </ul>
+          </div>
+
+          <div class="reveal relative" style="transition-delay:.1s" x-data="{ canton: 'Santa Ana', tramite: 'Patente Comercial' }">
+            <div class="absolute -inset-px rounded-[1.75rem] bg-gradient-to-br from-emerald-400/40 via-white/5 to-cyan-400/20"></div>
+            <div class="relative rounded-[1.75rem] bg-slate-900/95 backdrop-blur-xl p-6 md:p-8 shadow-2xl shadow-black/50">
+              <div class="flex items-center gap-3 pb-5 mb-6 border-b border-white/5">
+                <span class="grid place-items-center w-11 h-11 rounded-xl bg-emerald-400/10 border border-emerald-400/25 text-emerald-300"><i data-lucide="shield-check" class="w-5 h-5"></i></span>
+                <div>
+                  <p class="text-sm font-bold"><span class="lang-es">Servicio Auditado por Aura Link Digital</span><span class="lang-en">Service Audited by Aura Link Digital</span></p>
+                  <p class="text-xs text-slate-400"><span class="lang-es">Verificación experta contra el reglamento municipal vigente.</span><span class="lang-en">Expert verification against current municipal bylaws.</span></p>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="font-bold text-xl"><span class="lang-es">Solicitar Pre-Auditoría</span><span class="lang-en">Request Pre-Audit</span></h3>
+                <span class="text-xs font-mono font-bold bg-emerald-400/15 text-emerald-300 px-2.5 py-1 rounded-lg border border-emerald-400/30">₡10,000 / $20</span>
+              </div>
+
+              <div class="space-y-4">
+                <div>
+                  <label for="cantonSelect" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5"><span class="lang-es">Cantón de la Municipalidad</span><span class="lang-en">Municipality Canton</span></label>
+                  <div class="relative">
+                    <select id="cantonSelect" x-model="canton" class="appearance-none w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-200 focus:outline-none focus:border-emerald-400 focus:ring-4 focus:ring-emerald-400/10 transition">
+                      <option value="Santa Ana">Santa Ana</option>
+                      <option value="Escazú">Escazú</option>
+                      <option value="San José">San José</option>
+                      <option value="Heredia">Heredia</option>
+                      <option value="Alajuela">Alajuela</option>
+                    </select>
+                    <i data-lucide="chevron-down" class="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500"></i>
+                  </div>
+                </div>
+                <div>
+                  <label for="tramiteSelect" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5"><span class="lang-es">Tipo de Trámite Comercial</span><span class="lang-en">Business Permit Type</span></label>
+                  <div class="relative">
+                    <select id="tramiteSelect" x-model="tramite" class="appearance-none w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-slate-200 focus:outline-none focus:border-emerald-400 focus:ring-4 focus:ring-emerald-400/10 transition">
+                      <option value="Patente Comercial">Patente Comercial / Apertura de Local</option>
+                      <option value="Licencia de Licores">Licencia de Licores (Restaurante / Bar)</option>
+                      <option value="Permiso Sanitario">Permiso Sanitario de Funcionamiento</option>
+                      <option value="Uso de Suelo">Uso de Suelo Comercial</option>
+                    </select>
+                    <i data-lucide="chevron-down" class="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500"></i>
+                  </div>
+                </div>
+
+                <a
+                  :href="auditLink(canton, tramite)" target="_blank" rel="noopener noreferrer"
+                  data-umami-event="WhatsApp-Audit-Click"
+                  class="group relative overflow-hidden w-full mt-2 inline-flex items-center justify-center gap-2 bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-extrabold py-4 px-5 rounded-2xl shadow-lg shadow-emerald-500/25 hover:-translate-y-0.5 transition"
+                >
+                  <span class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer"></span>
+                  <svg class="relative w-5 h-5"><use href="#wa"/></svg>
+                  <span class="relative lang-es">Coordinar Pre-Auditoría por WhatsApp</span>
+                  <span class="relative lang-en">Request Pre-Audit via WhatsApp</span>
+                </a>
+              </div>
+
+              <p class="text-[11px] text-slate-400 mt-5 text-center leading-relaxed">
+                <i data-lucide="lock" class="inline w-3 h-3 -mt-0.5"></i>
+                <strong class="text-slate-300"><span class="lang-es">Garantía PermisoRápido:</span><span class="lang-en">PermisoRápido Guarantee:</span></strong>
+                <span class="lang-es">Si la municipalidad rechaza su trámite por un error de forma aprobado en nuestro reporte, le devolvemos el 100% de su dinero.</span>
+                <span class="lang-en">If the municipality rejects your permit due to a formal error approved in our report, we refund 100% of your money.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section id="faq" class="relative py-20 md:py-24 border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-4" x-data="{ open: 0 }">
+          <h2 class="reveal text-3xl md:text-4xl font-extrabold tracking-tight text-center mb-10"><span class="lang-es">Preguntas frecuentes</span><span class="lang-en">Frequently asked questions</span></h2>
+          <div class="reveal space-y-3" style="transition-delay:.08s">
+            <template x-for="(f, i) in faqs" :key="i">
+              <div class="rounded-2xl border transition" :class="open === i ? 'border-emerald-400/30 bg-white/[.03]' : 'border-white/10 bg-white/[.015]'">
+                <button type="button" @click="open = open === i ? -1 : i" :aria-expanded="open === i"
+                        class="w-full flex items-center justify-between gap-4 text-left px-5 py-4 font-semibold">
+                  <span x-text="t(f.q)"></span>
+                  <span class="shrink-0 transition-transform duration-300" :class="open === i ? 'rotate-45 text-emerald-300' : 'text-slate-500'">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                  </span>
+                </button>
+                <div class="grid transition-[grid-template-rows] duration-300 ease-out" :class="open === i ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+                  <div class="overflow-hidden">
+                    <p class="px-5 pb-5 text-sm text-slate-400 leading-relaxed" x-text="t(f.a)"></p>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="border-t border-white/5 py-10 pb-28 sm:pb-10 text-center text-xs text-slate-500">
+      <div class="max-w-4xl mx-auto px-4">
+        <p class="mb-4 text-[11px] leading-relaxed text-slate-400/80 max-w-2xl mx-auto">
+          <small>
+            <span class="lang-es"><strong>Aviso Legal:</strong> PermisoRápido CR es un servicio privado e independiente de verificación y pre-auditoría documental. No constituye un dictamen o resolución oficial municipal ni sustituye la gestión de un profesional o gestor colegiado.</span>
+            <span class="lang-en"><strong>Legal Disclaimer:</strong> PermisoRápido CR is an independent private document pre-audit service. It does not constitute an official municipal resolution nor replace a licensed agent.</span>
+          </small>
+        </p>
+        <p><small>&copy; 2026 PermisoRápido CR, Aura Link Digital.</small></p>
+      </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP BUTTON (Sticky) -->
-    <a href="https://wa.me/50663889598?text=Hola,%20necesito%20ayuda%20con%20mi%20patente%20municipal.%20%C2%BFMe%20pueden%20hacer%20la%20pre-auditor%C3%ADa%3F" target="_blank" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- ============ FLOATING WHATSAPP CTA ============ -->
+    <div class="fixed bottom-5 right-5 z-50 flex items-center gap-3" x-data="{ tip: false }" x-init="setTimeout(() => tip = true, 4000)">
+      <div
+        x-show="tip" x-cloak
+        x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-x-3" x-transition:enter-end="opacity-100 translate-x-0"
+        x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+        class="hidden sm:flex items-center gap-2 rounded-2xl bg-white text-slate-900 pl-4 pr-2 py-2.5 shadow-2xl"
+      >
+        <div>
+          <p class="text-sm font-bold leading-tight"><span class="lang-es">¿Dudas con su patente?</span><span class="lang-en">Questions about your permit?</span></p>
+          <p class="text-xs text-emerald-600 font-semibold flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span><span class="lang-es">En línea ahora</span><span class="lang-en">Online now</span>
+          </p>
+        </div>
+        <button type="button" @click="tip = false" class="p-1 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100" aria-label="Cerrar">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
 
-</body>
+      <a
+        href="https://wa.me/50663889598"
+        target="_blank" rel="noopener noreferrer"
+        data-umami-event="WhatsApp-Floating-Click"
+        aria-label="WhatsApp: +506 6388-9598"
+        class="relative grid place-items-center w-16 h-16 rounded-full bg-[#25D366] text-white shadow-2xl shadow-emerald-500/40 hover:scale-110 active:scale-95 transition-transform"
+      >
+        <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-60 animate-ping [animation-duration:2.2s]"></span>
+        <svg class="relative w-8 h-8"><use href="#wa"/></svg>
+        <span class="absolute top-0.5 right-0.5 flex h-4 w-4">
+          <span class="absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75 animate-ping"></span>
+          <span class="relative inline-flex h-4 w-4 rounded-full bg-emerald-400 ring-[3px] ring-slate-950"></span>
+        </span>
+      </a>
+    </div>
+
+    <!-- ============ APP LOGIC ============ -->
+    <script>
+      const WA = 'https://wa.me/50663889598';
+      const waUrl = (text) => `${WA}?text=${encodeURIComponent(text)}`;
+      const track = (name, data) => { try { window.umami && window.umami.track(name, data); } catch (e) {} };
+      const refreshIcons = () => { if (window.lucide) window.lucide.createIcons(); };
+
+      function app() {
+        return {
+          lang: 'es',
+          scrolled: false,
+          menu: false,
+          heroStep: 0,
+          heroChecks: [
+            { label: { es: 'Uso de Suelo', en: 'Land Use' }, status: { es: 'Conforme', en: 'Compliant' }, ok: true },
+            { label: { es: 'Plano Catastrado', en: 'Cadastral Plan' }, status: { es: 'Coincide', en: 'Matches' }, ok: true },
+            { label: { es: 'Permiso Sanitario', en: 'Health Permit' }, status: { es: 'Vence pronto', en: 'Expiring' }, ok: false },
+            { label: { es: 'CCSS / Hacienda', en: 'CCSS / Hacienda' }, status: { es: 'Al día', en: 'Current' }, ok: true }
+          ],
+          faqs: [
+            { q: { es: '¿Qué incluye la pre-auditoría?', en: 'What does the pre-audit include?' },
+              a: { es: 'Revisamos su expediente contra la checklist exacta de su municipalidad: fechas de vencimiento, Uso de Suelo, Plano Catastrado, Permiso Sanitario, contrato de arrendamiento y estado con CCSS/Hacienda. Recibe un reporte con luz verde o la lista exacta de correcciones.',
+                  en: 'We check your file against your municipality\'s exact checklist: expiration dates, Land Use, Cadastral Plan, Health Permit, lease, and CCSS/Hacienda standing. You get a green light or the exact list of fixes.' } },
+            { q: { es: '¿Ustedes hacen el trámite ante el CFIA o el Ministerio de Salud?', en: 'Do you file with the CFIA or the Ministry of Health?' },
+              a: { es: 'No. PermisoRápido CR es un servicio privado de pre-auditoría documental. No realizamos trámites del CFIA ni del MSP; verificamos que sus documentos estén completos y vigentes antes de presentarlos.',
+                  en: 'No. PermisoRápido CR is a private document pre-audit service. We do not file with the CFIA or MSP; we verify your documents are complete and current before you submit.' } },
+            { q: { es: '¿Cuánto cuesta y cómo pago?', en: 'How much is it and how do I pay?' },
+              a: { es: 'Una inversión única de ₡10,000 (aprox. $20), vía SINPE Móvil o transferencia bancaria.',
+                  en: 'A one-time ₡10,000 (about $20), via SINPE Móvil or bank transfer.' } },
+            { q: { es: '¿Qué pasa si igual me rechazan?', en: 'What if I still get rejected?' },
+              a: { es: 'Si la municipalidad rechaza su trámite por un error de forma aprobado en nuestro reporte, le devolvemos el 100% de su dinero.',
+                  en: 'If the municipality rejects your permit due to a formal error approved in our report, we refund 100% of your money.' } }
+          ],
+
+          t(o) { return o[this.lang] ?? o.es; },
+
+          init() {
+            try {
+              const saved = localStorage.getItem('pr-lang');
+              if (saved === 'en' || saved === 'es') this.lang = saved;
+            } catch (e) {}
+            document.documentElement.lang = this.lang;
+
+            const onScroll = () => { this.scrolled = window.scrollY > 10; };
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            // Animate the sample report card, then loop
+            const tick = () => {
+              this.heroStep = this.heroStep > this.heroChecks.length ? 0 : this.heroStep + 1;
+              setTimeout(tick, this.heroStep > this.heroChecks.length ? 2600 : 850);
+            };
+            setTimeout(tick, 900);
+
+            this.$nextTick(refreshIcons);
+          },
+
+          toggleLang() {
+            this.lang = this.lang === 'es' ? 'en' : 'es';
+            document.documentElement.lang = this.lang;
+            try { localStorage.setItem('pr-lang', this.lang); } catch (e) {}
+            track('Language-Toggle', { lang: this.lang });
+          },
+
+          auditLink(canton, tramite) {
+            return waUrl(this.lang === 'en'
+              ? `Hello! I would like to request a Pre-Audit for my ${tramite} in ${canton}. Please send me the SINPE details and instructions to send my documents.`
+              : `¡Hola! Me gustaría solicitar una Pre-Auditoría para mi trámite de ${tramite} en la Municipalidad de ${canton}. Quedo a la espera de los datos de SINPE y las instrucciones para enviar mis documentos.`);
+          }
+        };
+      }
+
+      function quiz() {
+        return {
+          step: 0,
+          dir: 1,
+          done: false,
+          gauge: 0,
+          busy: false,
+          answers: [],
+          questions: [
+            { key: 'canton', tag: { es: 'Ubicación', en: 'Location' },
+              q: { es: '¿En qué cantón está su local?', en: 'Where is your business located?' },
+              opts: [
+                { label: { es: 'San José', en: 'San José' }, w: 0, v: 'San José' },
+                { label: { es: 'Escazú', en: 'Escazú' }, w: 0, v: 'Escazú' },
+                { label: { es: 'Santa Ana', en: 'Santa Ana' }, w: 0, v: 'Santa Ana' },
+                { label: { es: 'Otro cantón', en: 'Other canton' }, w: 0, v: 'Otro' }
+              ] },
+            { key: 'suelo', tag: { es: 'Uso de Suelo', en: 'Land Use' },
+              q: { es: '¿Tiene el certificado de Uso de Suelo aprobado para su actividad exacta?', en: 'Is your Land Use certificate approved for your exact activity?' },
+              hint: { es: 'La municipalidad rechaza si la actividad del local no coincide con el uso de suelo conforme.', en: 'Municipalities reject files when the business activity doesn\'t match the approved land use.' },
+              flag: { es: 'Uso de Suelo sin confirmar para su actividad comercial.', en: 'Land Use not confirmed for your business activity.' },
+              opts: [
+                { label: { es: 'Sí, aprobado y coincide con mi actividad', en: 'Yes, approved and matches my activity' }, w: 0 },
+                { label: { es: 'Lo tengo, pero no sé si cubre mi actividad', en: 'I have it, but unsure it covers my activity' }, w: 20 },
+                { label: { es: 'No lo he solicitado todavía', en: 'I haven\'t requested it yet' }, w: 35 }
+              ] },
+            { key: 'plano', tag: { es: 'Plano Catastrado', en: 'Cadastral Plan' },
+              q: { es: '¿Su Plano Catastrado coincide con la dirección y finca del local?', en: 'Does your Cadastral Plan match the property and address?' },
+              hint: { es: 'Diferencias en número de finca o área son causa frecuente de observaciones.', en: 'Mismatched property numbers or areas are a frequent cause of observations.' },
+              flag: { es: 'Plano Catastrado desactualizado o que no coincide con el local.', en: 'Cadastral Plan outdated or not matching the premises.' },
+              opts: [
+                { label: { es: 'Sí, copia reciente y todo coincide', en: 'Yes, recent copy and everything matches' }, w: 0 },
+                { label: { es: 'Tengo una copia vieja o con datos distintos', en: 'I have an old copy or different data' }, w: 15 },
+                { label: { es: 'No tengo el plano', en: 'I don\'t have the plan' }, w: 25 }
+              ] },
+            { key: 'salud', tag: { es: 'Permiso de Salud', en: 'Health Permit' },
+              q: { es: '¿Su Permiso Sanitario de Funcionamiento está vigente?', en: 'Is your Health Operating Permit current?' },
+              hint: { es: 'No tramitamos el permiso ante el MSP: verificamos que el suyo esté en regla.', en: 'We don\'t file with the MSP: we verify yours is in order.' },
+              flag: { es: 'Permiso Sanitario de Funcionamiento vencido, por vencer o inexistente.', en: 'Health Operating Permit expired, expiring, or missing.' },
+              opts: [
+                { label: { es: 'Sí, vigente por más de 3 meses', en: 'Yes, valid for 3+ more months' }, w: 0 },
+                { label: { es: 'Vence pronto o está en trámite', en: 'Expiring soon or in process' }, w: 15 },
+                { label: { es: 'Vencido o no lo tengo', en: 'Expired or I don\'t have one' }, w: 30 }
+              ] },
+            { key: 'ccss', tag: { es: 'CCSS / Hacienda', en: 'CCSS / Hacienda' },
+              q: { es: '¿Está al día con la CCSS y Tributación (Hacienda)?', en: 'Are you current with the CCSS and Tax Authority (Hacienda)?' },
+              flag: { es: 'Posibles atrasos con la CCSS o Hacienda.', en: 'Possible arrears with the CCSS or Hacienda.' },
+              opts: [
+                { label: { es: 'Sí, al día en ambas', en: 'Yes, current with both' }, w: 0 },
+                { label: { es: 'No estoy seguro', en: 'Not sure' }, w: 10 },
+                { label: { es: 'Tengo atrasos pendientes', en: 'I have pending arrears' }, w: 20 }
+              ] }
+          ],
+
+          get progress() { return this.done ? 100 : (this.step / this.questions.length) * 100; },
+
+          get score() {
+            let got = 0, max = 0;
+            this.questions.forEach((q, i) => {
+              const top = Math.max(...q.opts.map(o => o.w));
+              if (!top) return;
+              max += top;
+              got += q.opts[this.answers[i]]?.w ?? 0;
+            });
+            return max ? Math.round(got / max * 100) : 0;
+          },
+
+          get level() {
+            const s = this.score;
+            if (s >= 50) return { id: 'ALTO', color: '#f87171', badge: 'bg-red-400/15 text-red-300 border border-red-400/30',
+              label: { es: 'Riesgo ALTO de rechazo', en: 'HIGH rejection risk' },
+              text: { es: 'Su expediente tiene una probabilidad alta de ser rechazado. Le recomendamos una pre-auditoría antes de presentarlo.', en: 'Your file has a high probability of being rejected. We recommend a pre-audit before submitting it.' } };
+            if (s >= 20) return { id: 'MEDIO', color: '#fbbf24', badge: 'bg-amber-400/15 text-amber-300 border border-amber-400/30',
+              label: { es: 'Riesgo MEDIO de rechazo', en: 'MEDIUM rejection risk' },
+              text: { es: 'Hay puntos que podrían generar observaciones. Una revisión rápida evitaría atrasos.', en: 'Some items could trigger observations. A quick review would prevent delays.' } };
+            return { id: 'BAJO', color: '#34d399', badge: 'bg-emerald-400/15 text-emerald-300 border border-emerald-400/30',
+              label: { es: 'Riesgo BAJO de rechazo', en: 'LOW rejection risk' },
+              text: { es: 'Su situación luce en orden. Aun así, una pre-auditoría confirma que no falte ningún detalle.', en: 'Your situation looks in order. Even so, a pre-audit confirms nothing is missing.' } };
+          },
+
+          get flags() {
+            return this.questions
+              .map((q, i) => ({ q, w: q.opts[this.answers[i]]?.w ?? 0, top: Math.max(...q.opts.map(o => o.w)) }))
+              .filter(x => x.q.flag && x.w > 0)
+              .map(x => ({ key: x.q.key, text: x.q.flag, severe: x.w === x.top }));
+          },
+
+          get canton() { return this.questions[0].opts[this.answers[0]]?.v ?? ''; },
+
+          get waLink() {
+            const es = this.lang !== 'en';
+            const items = this.flags.map(f => `• ${this.t(f.text)}`).join('\n');
+            const msg = es
+              ? `¡Hola! Hice el Diagnóstico de Riesgo en el sitio. Resultado: Riesgo ${this.level.id} (${this.score}%)${this.canton ? `, cantón: ${this.canton}` : ''}.${items ? `\nPuntos a revisar:\n${items}` : ''}\nQuisiera una pre-auditoría de mi expediente.`
+              : `Hello! I took the Risk Diagnostic on your site. Result: ${this.level.id} risk (${this.score}%)${this.canton ? `, canton: ${this.canton}` : ''}.${items ? `\nItems to review:\n${items}` : ''}\nI'd like a pre-audit of my file.`;
+            return waUrl(msg);
+          },
+
+          select(i) {
+            if (this.busy) return;
+            this.busy = true;
+            this.answers[this.step] = i;
+            setTimeout(() => {
+              this.busy = false;
+              if (this.step < this.questions.length - 1) {
+                this.dir = 1;
+                this.step++;
+              } else {
+                this.finish();
+              }
+            }, 260);
+          },
+
+          back() {
+            if (this.step === 0) return;
+            this.dir = -1;
+            this.step--;
+          },
+
+          finish() {
+            this.done = true;
+            this.gauge = 0;
+            track('Risk-Quiz-Complete', { level: this.level.id, score: this.score });
+            this.$nextTick(() => {
+              refreshIcons();
+              requestAnimationFrame(() => {
+                const target = this.score, start = performance.now();
+                const run = (now) => {
+                  const p = Math.min(1, (now - start) / 1200);
+                  this.gauge = target * (1 - Math.pow(1 - p, 3));
+                  if (p < 1) requestAnimationFrame(run);
+                };
+                requestAnimationFrame(run);
+              });
+            });
+          },
+
+          restart() {
+            this.answers = [];
+            this.dir = -1;
+            this.step = 0;
+            this.done = false;
+            this.gauge = 0;
+          }
+        };
+      }
+
+      function calc() {
+        return {
+          rent: 800000,
+          weeks: 6,
+          shown: { weekly: 0, daily: 0, total: 0 },
+          _raf: null,
+
+          get weekly() { return this.rent * 12 / 52; },
+          get daily() { return this.rent * 12 / 365; },
+          get total() { return this.weekly * this.weeks; },
+          get multiple() { return Math.max(1, Math.round(this.total / 10000)).toLocaleString('en-US'); },
+          get hoursLabel() {
+            const hours = 10000 / (this.rent * 12 / 8760);
+            if (hours < 24) return this.lang === 'en' ? `${Math.max(1, Math.round(hours))} hours` : `${Math.max(1, Math.round(hours))} horas`;
+            const days = Math.round(hours / 24);
+            return this.lang === 'en' ? `${days} day${days > 1 ? 's' : ''}` : `${days} día${days > 1 ? 's' : ''}`;
+          },
+          get waLink() {
+            return waUrl(this.lang === 'en'
+              ? `Hello! I used the Cost of Delay calculator: with ₡${this.num(this.rent)} monthly rent, ${this.weeks} weeks closed would cost me ₡${this.num(this.total)}. I'd like to request a Pre-Audit.`
+              : `¡Hola! Usé la calculadora de Costo del Atraso: con un alquiler de ₡${this.num(this.rent)}, ${this.weeks} semanas cerrado me costarían ₡${this.num(this.total)}. Quisiera solicitar una Pre-Auditoría.`);
+          },
+
+          num(v) { return Math.round(v).toLocaleString('en-US'); },
+          fmt(v) { return '₡' + this.num(v); },
+
+          init() {
+            this.animate();
+            this.$watch('rent', () => this.animate());
+            this.$watch('weeks', () => this.animate());
+          },
+
+          // Tween the displayed figures toward their targets
+          animate() {
+            cancelAnimationFrame(this._raf);
+            const from = { ...this.shown };
+            const to = { weekly: this.weekly, daily: this.daily, total: this.total };
+            const start = performance.now();
+            const run = (now) => {
+              const p = Math.min(1, (now - start) / 450);
+              const e = 1 - Math.pow(1 - p, 3);
+              for (const k in to) this.shown[k] = from[k] + (to[k] - from[k]) * e;
+              if (p < 1) this._raf = requestAnimationFrame(run);
+            };
+            this._raf = requestAnimationFrame(run);
+          }
+        };
+      }
+
+      function carousel() {
+        return {
+          active: 0,
+          onScroll() {
+            const el = this.$refs.track;
+            const cards = [...el.children];
+            const center = el.scrollLeft + el.clientWidth / 2;
+            let best = 0, dist = Infinity;
+            cards.forEach((c, i) => {
+              const d = Math.abs(c.offsetLeft + c.offsetWidth / 2 - center);
+              if (d < dist) { dist = d; best = i; }
+            });
+            this.active = best;
+          },
+          go(i) {
+            const el = this.$refs.track, card = el.children[i];
+            el.scrollTo({ left: card.offsetLeft - (el.clientWidth - card.offsetWidth) / 2, behavior: 'smooth' });
+          }
+        };
+      }
+
+      // Icons in static markup + scroll-triggered reveals
+      document.addEventListener('DOMContentLoaded', () => {
+        refreshIcons();
+        const els = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) { els.forEach(el => el.classList.add('in')); return; }
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(el => {
+          // Show above-the-fold content immediately instead of waiting on the observer
+          if (el.getBoundingClientRect().top < innerHeight) el.classList.add('in');
+          else io.observe(el);
+        });
+      });
+
+      // Re-render icons inside Alpine templates after they mount
+      document.addEventListener('alpine:initialized', () => setTimeout(refreshIcons, 0));
+    </script>
+  </body>
 </html>
