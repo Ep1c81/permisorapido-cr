@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYRJJM5DGT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZYRJJM5DGT');
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#020617" />
@@ -322,7 +332,7 @@
               </ul>
 
               <div class="rounded-2xl p-4 border transition-all duration-500"
-                   :class="heroStep >= heroChecks.length ? 'border-emerald-400/30 bg-emerald-400/10' : 'border-white/5 bg-white/[.02]'">
+                    :class="heroStep >= heroChecks.length ? 'border-emerald-400/30 bg-emerald-400/10' : 'border-white/5 bg-white/[.02]'">
                 <div class="flex items-center justify-between text-xs mb-2">
                   <span class="font-semibold text-slate-300"><span class="lang-es">Estado del expediente</span><span class="lang-en">File status</span></span>
                   <span class="font-bold" :class="heroStep >= heroChecks.length ? 'text-emerald-300' : 'text-slate-500'"
@@ -330,7 +340,7 @@
                 </div>
                 <div class="h-1.5 rounded-full bg-white/5 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-emerald-400 to-cyan-300 transition-all duration-700"
-                       :style="`width:${Math.min(100, heroStep / heroChecks.length * 100)}%`"></div>
+                        :style="`width:${Math.min(100, heroStep / heroChecks.length * 100)}%`"></div>
                 </div>
               </div>
             </div>
